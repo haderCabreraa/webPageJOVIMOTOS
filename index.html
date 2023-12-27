@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovimotos 2.0 (js)</title>
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="styles.css">
+    <!--OF FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--FONT-FAMILY MONSERRAT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!--ENCABEZADO PRINCIPAL-->
+            <nav class="nav-main">
+                <img src="img/logo_jovimotos.jpeg" alt="logo-jovimotos" class="nav-brand">
+                <ul class="nav-menu">
+                    <li><a href="#">MOTOS</a></li>
+                    <li><a href="#">CARROS</a></li>
+                    <li><a href="#">SERVICIOS</a></li>
+                    <li><a href="#">SOBRE NOSOTROS</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li>|</li>
+                </ul>
+                <button id="buttonNav" onclick="probando()"><i class="fas fa-search"></i></button>
+            </nav>
+        <!--NAVEGACION-->
+            <div id="contenedorNav">
+                <template id="navTemplate">
+                    <nav class="container-search">
+                        <button  id="closeNav" onclick="closeNav()">X</button>
+                        <form class="search-box">
+                            <input id="textNav" type="text" placeholder="Que deseas buscar?...">
+                        </form>
+
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <button onclick="mostrarAlgo()">BORRAR</button>
+                    </nav>
+                </template>
+            </div>
+        <!--SHOWCASE-->
+            <header class="showcase">
+                <a onclick="" href="#" id="linkBuy">Comprar ahora<i class="fas fa-angle-double-right"></i></a>
+                <p>Haz realidad <br> el sueño  de tu <br> <span class="resaltar">primer MOTO</span></p>
+            </header>
+        <!--NEWS CARD-->
+            <div class="newsCards">
+                <div>
+                    <img src="img/marca1.jpg" alt="cards">
+                    <h3>Motos enduro</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque perspiciatis error aspernatur autem aliquam vitae facilis quis inventore ullam nihil.</p>
+                    <a href="#">Lear more <i class="fas fa-angle-double-right"></i></a>
+                </div>
+                <div>
+                    <img src="img/marca2.jpg" alt="cards">
+                    <h3>Motos sport</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque perspiciatis error aspernatur autem aliquam vitae facilis quis inventore ullam nihil.</p>
+                    <a href="#">Lear more <i class="fas fa-angle-double-right"></i></a>
+                </div>
+                <div>
+                    <img src="img/marca3.jpg" alt="cards">
+                    <h3>Mas vendidas</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque perspiciatis error aspernatur autem aliquam vitae facilis quis inventore ullam nihil.</p>
+                    <a href="#">Lear more <i class="fas fa-angle-double-right"></i></a>
+                </div>
+            </div>
+            <!--SERVICIOS-->
+            <div class="servicios">
+                <div>
+                    <h3>Tramitamos y gestionamos</h3>
+                    <ul>
+                        <li><a href="#">Traspaso de vehiculos</a></li>
+                        <li><a href="#">Pago de impuestos</a></li>
+                        <li><a href="#">Avaluo de vehiculos</a></li>
+                        <li><a href="#">Duplicado de placas</a></li>
+                        <li><a href="#">Y mas...</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Vendemos</h3>
+                    <ul>
+                        <li><a href="#">Formularios de venta</a></li>
+                        <li><a href="#">Cartaventa</a></li>
+                        <li><a href="#">Denuncios de perdida</a></li>
+                        <li><a href="#">Soat y Tecnicomecanica</a></li>
+                        <li><a href="#">Y mas...</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--FORMULARIO-->
+            <footer class="container-footer">
+                <h1 class="tittle-footer">Contac<span>TANOS</span></h1>
+                <div class="container-footer2">
+                    <div class="form-footer">
+                        <h3>Formulario de contacto</h3>
+                        <form action="">
+                            <p>
+                                <label for="">Fullname</label>
+                                <input type="text" name="fullname">
+                            </p>
+                            <p>
+                                <label for="">eMail Address</label>
+                                <input type="email"  name="email">
+                            </p>
+                            <p>
+                                <label for="">Telefono</label>
+                                <input type="tel" name="telefono">
+                            </p>
+                            <p>
+                                <label for="">Asunto</label>
+                                <input type="text" name="asunto">
+                            </p>
+                            <p class="block">
+                                <label for="">Mensaje</label>
+                                <textarea name="mensaje" rows="3"></textarea>
+                            </p>
+                            <p class="block">
+                                <button type="submit">Enviar</button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="info-footer">
+                        <h4>More info</h4>
+                        <ul>
+                            <li><i class="fas fa-envelope"></i>Jubel@gmail.com</li>
+                            <li><i class="fas fa-phone"></i>3102262278</li>
+                            <li><i class="fas fa-circle"></i>Carrera 6 # 14-12 Piedecuesta</li>
+                        </ul>
+                        <p>Tenemos una unica sede fisica ubicada en CARRERA 6 # 14-12 PIEDECUESTA, si no estas cerca te recomiendo contactarnos por nuestras redes sociales o comunicandose a las lineas de atencion. A continuación encontraras un formulario si deseas que nos contactemos con usted.</p>
+                        <p>COPYRIGHT 2023 - TODOS LOS DERECHOS RESERVADOS | JOVIMOTOS S.A </p>
+                    </div>
+                </div>
+            </footer>
+    </div>
+
+    <script src="main.js"></script>
+
+
+</body>
+</html>
