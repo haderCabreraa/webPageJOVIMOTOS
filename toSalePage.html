@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>motos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;900&family=Grenze+Gotisch:wght@200;300;500;900&family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        *{
+            text-decoration: none;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container-general{
+            display: grid;
+            grid-template-columns: 15% 85%;
+            grid-template-rows: repeat(4,auto);
+            width: 100vw;
+        }
+        /*DISEÑO DE encabezado*/
+        .header{
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .item1{
+            background-color: #cacac8;
+        }
+        .item1 a img{
+            border-radius: 10px;
+            box-shadow: 2px 4px black;
+        }
+        .item2{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #cacac8;
+        }
+        .item2 > div:hover{
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            font-size:1.2rem;
+            padding: 10px;
+        }
+        /*DISEÑO DE encabezado*/
+        /*DISEÑO LEFT*/
+        .filtros{
+            grid-row: 2 / 4;
+            grid-column: 1 / 2;
+            background-color: aquamarine;
+            background-color: white;
+            border-right: 4px solid gray;
+            padding: 10px;
+        }
+        .filtros > ul >li{
+            padding-left: 20px;
+            line-height: 2.2rem;
+            font-size: 1.2rem;
+        }
+        .filtros > ul {
+            padding-bottom: 30px;
+        }
+        /*DISEÑO LEFT*/
+        /*DISEÑO MAIN*/
+        .motos{
+            padding: 20px;
+            grid-column: 2 / 3;
+            grid-row: 2 / 4;
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            gap: 10px;
+            justify-content: space-evenly;  
+            background-image: url(final.jpg);
+        }
+        .clase > img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .clase{
+            position: relative;
+            width: 45%;
+            height: 450px;
+            padding: 40px;
+        }
+        .motos p{
+            position: absolute ;
+            top: 30px;
+            justify-content: space-evenly;
+            left: 0;
+            background-color:  #f73149;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bolder;
+            font-size: 1.5rem;
+        }
+        .clase >img:hover{
+            box-shadow: 20px 40px 30px 1px #b6846b;
+            border-radius: 5px;
+            width: 110%;
+            height: 110%;
+        }
+        .clase p a{
+            text-decoration: none;
+            color: #000;
+        }
+        /*DISEÑO MAIN*/
+        /*DISEÑO FOOTER*/
+        footer{
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+            color: black;
+            padding: 0 1.5em;
+        }
+        .container-footer{
+            margin-left: 0;
+            margin-right: auto;
+            width: 100vw;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+  
+        .tittle-footer{
+            text-align: center;
+            font-size: 3em;
+            color: #000;
+        }
+        span{
+            color: #f73149;
+        }
+
+        .form-footer{
+            background: linear-gradient(35deg, #222222, black);
+        }
+        .form-footer form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .form-footer form .block{
+            grid-column: 1 / 3;
+        }
+        .form-footer form button,.form-footer form input,.form-footer form textarea{
+            width: 100%;
+            padding: 0.7em;
+            border: none;
+            background: none;
+            border-bottom:1px solid #f73149 ;
+            outline: 0;
+            color: #fff;
+        }
+        .form-footer form button{
+            background-color: #f73149;
+            border: 0;
+            text-transform: uppercase;
+            padding: 2em;
+            color: #000010;
+        }
+        .form-footer form button:hover, .form-footer form button:focus{
+            background-color: #f73149;
+            opacity: 0.6;
+            color: #fff;
+        }
+        .info-footer{
+            background-color: #000;
+        }
+        .info-footer h4, .info-footer ul, .info-footer p{
+            text-align: center;
+            margin: 0 0 1rem 0;
+        }
+        .info-footer ul{
+            list-style: none;
+        }
+        /*DISEÑO FOOTER*/
+        /*RESPONSIVE*/
+        @media screen and (min-width:480px) and (max-width:768px){
+            .header-logo, .filtros{
+                display: none;
+            }
+            .motos{
+                display: block;
+                margin: 0 auto;
+            }
+            .clase{
+                width: auto;
+                height: auto;
+            }
+            .header-menu-main{
+                display: flex;
+                flex-wrap: wrap;
+                width: auto;
+                position: relative;
+            }
+            .item2{
+                font-size: 0.7rem;
+            }
+            .item2 > div:hover{
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            font-size:1rem;
+            padding: 5px;
+            gap: 5px;
+            border-left: 1px solid black;
+        }
+    
+        }
+        @media screen and (max-width:480px){
+            .header-logo, .filtros{
+                display: none;
+            }
+            .motos{
+                display: block;
+                padding: 0;
+            }
+            .clase{
+                width: auto;
+                height: auto;
+            }
+            .item2{
+                flex-wrap: wrap;
+            }
+            .tittle-footer{
+                font-size: 1.3rem;
+            }
+            .motos p{
+            position: absolute ;
+            top: 10px;
+            left: 0;
+            background-color:  #f73149;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            }
+            .item2 > div:hover{
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            font-size:0.9rem;
+            padding: 5px;
+            }
+        }
+        .color-block{
+            color: #000;
+        }
+        .color-block > a:hover{
+            color: white;
+        }
+        /*RESPONSIVE*/
+    </style>
+</head>
+<body>
+    <div class="container-general">
+        <header class="header">
+            <div class="item1"><a href="grilla_pagina_principal.html"><img src="logo_escalkadi.jpeg" alt="logo-empresa"></a></div>
+            <div class="item2">
+                <div class="menu-item1 color-block"><a href="motos-pag2.html">MOTOS</a></div>
+                <div class="menu-item2">CARROS</div>
+                <div class="menu-item3">SERVICIOS</div>
+                <div class="menu-item4 color-block"><a href="motos-pag4.html">SOBRE NOSOTROS</a></div>
+                <div class="menu-item5">|</div>
+                <div class="item-main5 color-block"><a href="grilla_pagina_principal.html">HOME</a></div>
+            </div>
+        </header>
+        <div class="filtros">
+            <ul>
+                <h3>Marcas</h3>
+                <li><a href="#">Yamaha</a></li>
+                <li><a href="#">Honda</a></li>
+                <li><a href="#">kawasaki</a></li>
+                <li><a href="#">Hero</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Bajaj</a></li>
+                <li><a href="#">Susuki</a></li>
+                <li><a href="#">KTM</a></li>
+                <li><a href="#">AKT</a></li>
+            </ul>
+            <ul>
+                <h3>Colores</h3>
+                <li><a href="">Blanco</a></li>
+                <li><a href="">Negro</a></li>
+                <li><a href="">Amarillo</a></li>
+                <li><a href="">Rojo</a></li>
+                <li><a href="">Azul</a></li>
+                <li><a href="">Gris</a></li>
+                <li><a href="">Cafe</a></li>
+                <li><a href="">Tri-color</a></li>
+            </ul>
+            <ul>
+                <h3>Precio ($COP)</h3>
+                <li><a href="#">1'000.000 - 2'500.000</a></li>
+                <li><a href="#">2'500.001 - 3'500.000</a></li>
+                <li><a href="#">3'500.001 - 4'500.000</a></li>
+                <li><a href="#">4'500.001 - 5'500.000</a></li>
+                <li><a href="#">5'500.000 - 6'500.000</a></li>
+                <li><a href="#">6'500.001 - ...</a></li>
+            </ul>
+        </div>
+
+        <section class="motos">
+            <div class="clase" id="clase1" >
+                <img src="moto1.jpeg" alt="">
+                <p><a href="motos-pag3.html">TVS 100 - 2019</a></p>
+            </div>
+            <div class="clase" id="clase2" >
+                <img src="moto2.jpeg" alt="">
+                <p  >TVS 100 - 2022</p>
+            </div>
+            <div class="clase" id="clase1" >
+                <img src="moto10.jpeg" alt="">
+                <p>SUSUKI VIVAR - 2015</p>
+            </div>
+            <div class="clase" id="clase2" >
+                <img src="moto5.jpeg" alt="">
+                <p>TVS 100 - 2023</p>
+            </div>
+            <div class="clase" id="clase1" >
+                <img src="moto7.jpeg" alt="">
+                <p>BOXER CT125 - 2015</p>
+            </div>
+            <div class="clase" id="clase2" >
+                <img src="moto8.jpeg" alt="">
+                <p>HONDA DINAMIC 100 - 2012</p>
+            </div>
+            </div>
+            </section>
+            <footer class="container-footer">
+                <h1 class="tittle-footer">Contac<span>TANOS</span></h1>
+                <div class="container-footer2">
+                    <div class="form-footer">
+                        <h3>Formulario de contacto</h3>
+                        <form action="">
+                            <p>
+                                <label for="">Fullname</label>
+                                <input type="text" name="fullname">
+                            </p>
+                            <p>
+                                <label for="">eMail Address</label>
+                                <input type="email"  name="email">
+                            </p>
+                            <p>
+                                <label for="">Telefono</label>
+                                <input type="tel" name="telefono">
+                            </p>
+                            <p>
+                                <label for="">Asunto</label>
+                                <input type="text" name="asunto">
+                            </p>
+                            <p class="block">
+                                <label for="">Mensaje</label>
+                                <textarea name="mensaje" rows="3"></textarea>
+                            </p>
+                            <p class="block">
+                                <button type="submit">Enviar</button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="info-footer">
+                        <h4>More info</h4>
+                        <ul>
+                            <li><i class="fas fa-envelope"></i>Jubel@gmail.com</li>
+                            <li><i class="fas fa-phone"></i>3102262278</li>
+                            <li><i class="fas fa-circle"></i>Carrera 6 # 14-12 Piedecuesta</li>
+                        </ul>
+                        <p>Tenemos una unica sede fisica ubicada en CARRERA 6 # 14-12 PIEDECUESTA, si no estas cerca te recomiendo contactarnos por nuestras redes sociales o comunicandose a las lineas de atencion. A continuación encontraras un formulario si deseas que nos contactemos con usted.</p>
+                        <p>COPYRIGHT 2023 - TODOS LOS DERECHOS RESERVADOS | JOVIMOTOS S.A </p>
+                    </div>
+                </div>
+            </footer>
+    </div>
+</body>
+</html>

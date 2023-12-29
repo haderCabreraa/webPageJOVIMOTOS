@@ -1,0 +1,13 @@
+[{"yamaha": 
+        [{"nombre": "DT", "modelo": 1997, "referencia": "DT175", "cilindraje": "171"},
+            {"nombre": "FZ", "modelo": 2022, "referencia": "FZ-FAZER", "cilindraje": "150"},
+            {"nombre": "MT", "modelo": 2022, "referencia": "MT-03", "cilindraje": "299"}
+        ]
+    }, 
+    {"honda": 
+        [{"nombre": "NAVI", "modelo": 2020, "referencia": "VANI MIX", "cilindraje": "110"},
+            {"nombre": "CBX", "modelo": 2023, "referencia": "TWISTER", "cilindraje": "250"},
+            {"nombre": "CB", "modelo": 2022, "referencia": "CB-660", "cilindraje": "660"}
+        ]
+    }
+]

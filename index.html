@@ -25,8 +25,11 @@
                     <li><a href="#">SOBRE NOSOTROS</a></li>
                     <li><a href="#">HOME</a></li>
                     <li>|</li>
+                    <li>
+                        <button id="buttonNav" onclick="probando()"><i class="fas fa-search"></i></button>
+                    </li>
                 </ul>
-                <button id="buttonNav" onclick="probando()"><i class="fas fa-search"></i></button>
+
             </nav>
         <!--NAVEGACION-->
             <div id="contenedorNav">
@@ -34,11 +37,12 @@
                     <nav class="container-search">
                         <button  id="closeNav" onclick="closeNav()">X</button>
                         <form class="search-box">
-                            <input id="textNav" type="text" placeholder="Que deseas buscar?...">
+                            <input id="textNav" type="text" placeholder="Buscar motos,categorias,referencias...">
                         </form>
 
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <button onclick="mostrarAlgo()">BORRAR</button>
+                        <a href="toSalePage.html"><button type="submit" id="paintBlue"><i class="fa fa-search"></i></button></a>
+
+                        <button onclick="mostrarAlgo()">BORRAR </button>
                     </nav>
                 </template>
             </div>
@@ -87,7 +91,7 @@
                         <li><a href="#">Cartaventa</a></li>
                         <li><a href="#">Denuncios de perdida</a></li>
                         <li><a href="#">Soat y Tecnicomecanica</a></li>
-                        <li><a href="#">Y mas....</a></li>
+                        <li><a href="#">Y mas...</a></li>
                     </ul>
                 </div>
             </div>
@@ -99,11 +103,11 @@
                         <h3>Formulario de contacto</h3>
                         <form action="">
                             <p>
-                                <label for="">Fullname</label>
+                                <label for="">Nombre completo</label>
                                 <input type="text" name="fullname">
                             </p>
                             <p>
-                                <label for="">eMail Address</label>
+                                <label for="">Correo electronico</label>
                                 <input type="email"  name="email">
                             </p>
                             <p>
@@ -124,17 +128,17 @@
                         </form>
                     </div>
                     <div class="info-footer">
-                        <h4>More info</h4>
+                        <h4>Mas informacion:</h4>
                         <ul>
                             <li><i class="fas fa-envelope"></i>Jubel@gmail.com</li>
                             <li><i class="fas fa-phone"></i>3102262278</li>
                             <li><i class="fas fa-circle"></i>Carrera 6 # 14-12 Piedecuesta</li>
                         </ul>
                         <p>Tenemos una unica sede fisica ubicada en CARRERA 6 # 14-12 PIEDECUESTA, si no estas cerca te recomiendo contactarnos por nuestras redes sociales o comunicandose a las lineas de atencion. A continuación encontraras un formulario si deseas que nos contactemos con usted.</p>
-                        <p>COPYRIGHT 2023 - TODOS LOS DERECHOS RESERVADOS | JOVIMOTOS S.A </p>
                     </div>
                 </div>
             </footer>
+            <p>COPYRIGHT 2023 - TODOS LOS DERECHOS RESERVADOS | JOVIMOTOS </p>
     </div>
 
     <script src="main.js"></script>
