@@ -1,16 +1,56 @@
-[{"yamaha": 
-        [{"nombre": "DT", "modelo": 1997, "referencia": "DT175", "cilindraje": "171", "foto":
-            "img/moto1.jpg"},
-            {"nombre": "FZ", "modelo": 2022, "referencia": "FZ-FAZER", "cilindraje": "150", "foto":
-            "img/moto2.jpg"},
-            {"nombre": "MT", "modelo": 2022, "referencia": "MT-03", "cilindraje": "299", "foto":
-            "img/moto3.jpg"}
-        ]
-    }, 
-    {"honda": 
-        [{"nombre": "NAVI", "modelo": 2020, "referencia": "VANI MIX", "cilindraje": "110",      "foto":"img/moto4.jpg"},
-            {"nombre": "CBX", "modelo": 2023, "referencia": "TWISTER", "cilindraje": "250", "foto":"img/moto3.jpg"},
-            {"nombre": "CB", "modelo": 2022, "referencia": "CB-660", "cilindraje": "660", "foto":"img/moto3.jpg"}
-        ]
-    }
-]
+{
+    "yamaha" : [
+        {
+            "nombre": "DT", 
+            "modelo": 1997, 
+            "referencia": "DT175", 
+            "cilindraje": "171", 
+            "foto": "img/moto1.jpeg"
+        },
+        {
+            "nombre": "FZ", 
+            "modelo": 2022, 
+            "referencia": "FZ-FAZER", 
+            "cilindraje": "150", 
+            "foto": "img/moto2.jpeg"
+        },
+        {
+            "nombre": "FZ", 
+            "modelo": 2022, 
+            "referencia": "FZ-FAZER", 
+            "cilindraje": "150", 
+            "foto": "img/moto2.jpeg"
+        },
+        {
+            "nombre": "MT", 
+            "modelo": 2022, 
+            "referencia": "MT-03", 
+            "cilindraje": "299", 
+            "foto": "img/moto3.jpeg"
+        }
+    ],
+
+    "honda" : [
+        {
+            "nombre": "NAVI", 
+            "modelo": 2020, 
+            "referencia": "VANI MIX", 
+            "cilindraje": "110",      
+            "foto":"img/moto4.jpeg"
+        },
+        {
+            "nombre": "CBX", 
+            "modelo": 2023, 
+            "referencia": "TWISTER", 
+            "cilindraje": "250", 
+            "foto":"img/moto3.jpeg"
+        },
+        {
+            "nombre": "CB", 
+            "modelo": 2022, 
+            "referencia": "CB-660", 
+            "cilindraje": "660", 
+            "foto":"img/moto3.jpeg"
+        }
+    ]
+}
