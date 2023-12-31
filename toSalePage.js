@@ -5,8 +5,10 @@ const inventario = {
             "nombre": "DT", 
             "modelo": 1997, 
             "referencia": "DT175", 
-            "cilindraje": "171", 
+            "cilindraje": 171, 
             "foto": "img/moto1.jpeg",
+            "precio": 2300000,
+            "kilometraje": 23000,
             nombreCompleto: function () {
                 return this.nombre + " " + this.apellido
             }
@@ -15,8 +17,10 @@ const inventario = {
             "nombre": "FZ", 
             "modelo": 2022, 
             "referencia": "FZ-FAZER", 
-            "cilindraje": "150", 
+            "cilindraje": 150, 
             "foto": "img/moto2.jpeg",
+            "precio": 2300000,
+            "kilometraje": 23000,
             nombreCompleto: function () {
                 return this.nombre + " " + this.apellido
             }
@@ -25,8 +29,10 @@ const inventario = {
             "nombre": "FZ", 
             "modelo": 2022, 
             "referencia": "FZ-FAZER", 
-            "cilindraje": "150", 
+            "cilindraje": 150, 
             "foto": "img/moto2.jpeg",
+            "precio": 2300000,
+            "kilometraje": 23000,
             nombreCompleto: function () {
                 return this.nombre + " " + this.apellido
             }
@@ -35,8 +41,10 @@ const inventario = {
             "nombre": "MT", 
             "modelo": 2022, 
             "referencia": "MT-03", 
-            "cilindraje": "299", 
+            "cilindraje": 299, 
             "foto": "img/moto3.jpeg",
+            "precio": 2300000,
+            "kilometraje": 23000,
             nombreCompleto: function () {
                 return this.nombre + " " + this.apellido
             }
@@ -48,8 +56,10 @@ const inventario = {
             "nombre": "NAVI", 
             "modelo": 2020, 
             "referencia": "VANI MIX", 
-            "cilindraje": "110",      
+            "cilindraje": 110,      
             "foto":"img/moto4.jpeg",
+            "precio": 2300000,
+            "kilometraje": 23000,
             nombreCompleto: function () {
                 return this.nombre + " " + this.apellido
             }
@@ -58,8 +68,10 @@ const inventario = {
             "nombre": "CBX", 
             "modelo": 2023, 
             "referencia": "TWISTER", 
-            "cilindraje": "250", 
+            "cilindraje": 250, 
             "foto":"img/moto3.jpeg",
+            "precio": 2300000,
+            "kilometraje": 23000,
             nombreCompleto: function () {
                 return this.nombre + " " + this.apellido
             }
@@ -68,8 +80,10 @@ const inventario = {
             "nombre": "CB", 
             "modelo": 2022, 
             "referencia": "CB-660", 
-            "cilindraje": "660", 
+            "cilindraje": 660, 
             "foto":"img/moto3.jpeg",
+            "precio": 2300000,
+            "kilometraje": 23000,
             nombreCompleto: function () {
                 return this.nombre + " " + this.apellido
             }
@@ -77,11 +91,10 @@ const inventario = {
     ]
 };
 
-console.log(Object.entries(inventario).length);
-
         //Insertar un DIV como hijo de un PADRE
         ( function agregarElement() {
             const datos = new Array();
+            const datosMarca = new Array();
             const element = document.querySelector(".newsCards");
                 //recorrer MARCAS
                 Object.entries(inventario).forEach((value,clave) => {
@@ -91,16 +104,26 @@ console.log(Object.entries(inventario).length);
                         //console.log(value[0]) //MARCA
                         //pasar datos a un array
                         datos.push(Object.values(value[1][i]))
+                        datosMarca.push(value[0]    )
                     }
                 })
                     //creo cada HIJO
                     for (k = 0; k < datos.length; k++){
                         const div = document.createElement("div");
-                        div.innerHTML = `<div><img src="${datos[k][4]}"alt="cards"><h3>MARCA..<h2>${datos[k][2]}</h2></h3><ul><li>Modelo: ${datos[k][1]}</li><li>Cilindraje: ${datos[k][3]}</li><li></li><li></li><li></li></ul><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a></div>`;
+                        div.innerHTML = `<div><img src="${datos[k][4]}"alt="cards"><h3>${datosMarca[k]}<span>${datos[k][2]}</span></h3><ul><li>Modelo: ${datos[k][1]}</li><li>Cilindraje: ${datos[k][3]}cc</li><li>Kilometraje: ${datos[k][5]}</li></ul><br><p>Precio: ${datos[k][5].toLocaleString('es-ES')} COP</p><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a></div>`;
                         element.appendChild(div);
                     //ver array de datos de motos
-                    console.log(datos);
+                    console.log(datos[k][5].toLocaleString('es-ES'));
                 }
         })()
 
-
+        //NAVEGACION
+            //borrar caja de texto
+            let mostrarAlgo = function() {
+                const mensaje = document.querySelector("#textNav");
+                mensaje.value = '';
+            }
+            //Funciona para volver a inicio con lupa
+            function toTop() {
+                window.scrollTo(0, 0)
+            }
