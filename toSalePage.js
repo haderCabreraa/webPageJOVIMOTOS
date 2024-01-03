@@ -100,7 +100,7 @@ const inventario = {
             const botonSiguienteDOM = document.querySelector(".siguiente");
             const botonAtrasDOM1 = document.querySelector(".atras1");
             const botonSiguienteDOM1 = document.querySelector(".siguiente1");
-            const elementosPorPagina = 6;
+            const elementosPorPagina = 4;
             let paginaActual = 1;
 
                 //recorrer MARCAS
@@ -173,7 +173,7 @@ const inventario = {
                     // Crear un artículo para cada elemento que se encuentre en la página actual
                     for (k = 0; k < rebanadaDatos.length; k++){
                         const div = document.createElement("div");
-                        div.innerHTML = `<div><img src="${rebanadaDatos[k][4]}"alt="cards"><h3>${datosMarca[k]}<span>${rebanadaDatos[k][2]}</span></h3><ul><li>Modelo: ${datos[k][1]}</li><li>Cilindraje: ${rebanadaDatos[k][3]}cc</li><li>Kilometraje: ${rebanadaDatos[k][5]}</li></ul><br><p>Precio: ${rebanadaDatos[k][5].toLocaleString('es-ES')} COP</p><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a></div>`;
+                        div.innerHTML = `<div><img src="${rebanadaDatos[k][4]}"alt="cards"><h3>${datosMarca[k]}<span>${rebanadaDatos[k][2]}</span></h3><ul><li>Modelo: ${datos[k][1]}</li><li>Cilindraje: ${rebanadaDatos[k][3]}cc</li><li>Kilometraje: ${rebanadaDatos[k][5]}</li></ul><br><p>Precio: ${rebanadaDatos[k][5].toLocaleString('es-ES')} COP</p><hr><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a></div>`;
                         element.appendChild(div);
                     }
                 }
