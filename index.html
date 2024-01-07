@@ -14,22 +14,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
     <div class="container">
         <!--ENCABEZADO PRINCIPAL-->
             <nav class="nav-main">
-                <img src="img/logo_jovimotos.jpeg" alt="logo-jovimotos" class="nav-brand">
+                <a href="index.html"><img src="img/logo_jovimotos.jpeg" alt="logo-jovimotos" class="nav-brand"></a>
                 <ul class="nav-menu">
                     <li><a href="#">MOTOS</a></li>
                     <li><a href="#">CARROS</a></li>
                     <li><a href="#">SERVICIOS</a></li>
                     <li><a href="#">SOBRE NOSOTROS</a></li>
-                    <li><a href="#">HOME</a></li>
-                    <li>|</li>
+                    <li><a href="index.html">HOME</a></li>
+                </ul>
+                <ul class="nav-menu-rigth">
                     <li>
                         <button id="buttonNav" onclick="probando()"><i class="fas fa-search"></i></button>
                     </li>
                 </ul>
-
             </nav>
         <!--NAVEGACION-->
             <div id="contenedorNav">
@@ -39,9 +42,7 @@
                         <form class="search-box">
                             <input id="textNav" type="text" placeholder="Buscar motos,categorias,referencias...">
                         </form>
-
                         <a href="toSalePage.html"><button type="submit" id="paintBlue"><i class="fa fa-search"></i></button></a>
-
                         <button onclick="mostrarAlgo()">BORRAR </button>
                     </nav>
                 </template>
@@ -140,9 +141,6 @@
             </footer>
             <p>COPYRIGHT 2023 - TODOS LOS DERECHOS RESERVADOS | JOVIMOTOS </p>
     </div>
-
     <script src="main.js"></script>
-
-
 </body>
 </html>

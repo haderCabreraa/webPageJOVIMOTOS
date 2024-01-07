@@ -7,10 +7,33 @@ body{
     margin: 0;
     padding: 0;
 }
+.container  button {
+    padding: 10px;
+}
+a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style: none;
+}
 .container-general {
     display: grid;
     grid-template-columns: 19% auto;
     grid-template-rows: auto 90px auto auto;
+    margin-left: 0.5vw;
+}
+
+.menu-btn {
+    position: fixed;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    font-size: 1.62rem;
+    display: none;
 }
 
 /*DISEÑO DE encabezado*/
@@ -19,56 +42,45 @@ body{
         grid-row: 1 / 2 ;
         margin-bottom: 60px;
     }
-    .nav-main {
-        display: grid;
-        grid-template-columns: repeat(10,1fr);
-        background-color: #fff;
-        border-bottom: 4px solid #f73149;
-        position: fixed;
-        width: 98vw;
-        margin: 0 auto;
-    }
-    .nav-brand {
-        grid-column: 1 / 2;
-    }
-    .nav-brand {
-        width: 110px;
-    }
-    .nav-main img {
-        width: 80%;
-    }
-    .nav-menu {
-        grid-column: 5 / 11;
-        justify-content: end;
-        align-items: center;
-        margin-right: 20px;
-        gap: 20px;
-    }
-    .nav-main ul {
-        display: flex;
-    }
-    .container  button {
-        padding: 10px;
-    }
-    #buttonNav {
-        border: none;
-        border-radius: 5px;
-        background-color: #cacac8;
-        cursor: pointer;
-        padding: 10px;
-    }
-    .nav-main ul li a:hover {
-        border-bottom: 4px solid #b6846b;
-    }
- a{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    text-decoration: none;
-    color: black;
-    }
-    ul {
-        list-style: none;
-    }
+ /*SEGUNDO INTENTO DE MENU*/
+ .nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 4px solid #f73149;
+    position: fixed;
+    width: 98vw;
+    margin: 0 auto;
+}
+.nav-brand {
+    width: 90px;
+}
+.nav-main ul {
+    display: flex;
+}
+.nav-main ul li {
+    padding: 10px;
+}
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 50px;
+}
+.nav-main ul li a {
+    padding-bottom: 5px;
+}
+
+.nav-main ul li a:hover {
+    border-bottom: 4px solid #b6846b;
+}
+#buttonNav {
+    border: none;
+    border-radius: 5px;
+    background-color: #cacac8;
+    cursor: pointer;
+    padding: 10px;
+}
 /*DISEÑO LEFT*/
 .filtros{
     grid-row: 2 / 4;
@@ -297,10 +309,14 @@ outline: 0;
 font-size: 1.2rem;
 opacity: 0.3;
 }
-#paintBlue {
+#callToSearch {
 background-color: rgb(79, 185, 251);
 }
 #contenedorNav {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+/*PARA EL FILTRADO*/
+.filter {
+    display: none;
 }
