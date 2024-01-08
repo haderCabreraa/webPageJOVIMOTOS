@@ -100,7 +100,7 @@ const inventario = {
     const botonSiguienteDOM = document.querySelector(".siguiente");
     const botonAtrasDOM1 = document.querySelector(".atras1");
     const botonSiguienteDOM1 = document.querySelector(".siguiente1");
-    const elementosPorPagina = 4;
+    const elementosPorPagina = 10;
     let paginaActual = 1;
 
         //recorrer MARCAS
@@ -127,18 +127,21 @@ const inventario = {
         }
         function obtenerRebanadaDeBaseDeDatos(pagina) {
             rebanadaMotos = new Array();
+            rebanadaMarcas = new Array();
             const corteDeInicio = (pagina - 1) * elementosPorPagina;
             const corteDeFinal = corteDeInicio + elementosPorPagina;
             if(corteDeFinal < datos.length) { //para no pifiar la ultima impresion.
                 for (i = corteDeInicio; i < corteDeFinal; i++) {
-                    rebanadaMotos.push(datos[i])
+                    rebanadaMotos.push(datos[i]);
+                    rebanadaMarcas.push(datosMarca[i]);
                 }
-                return rebanadaMotos;
+                return [rebanadaMotos,rebanadaMarcas];
             } else {
                 for (i = corteDeInicio; i < datos.length; i++) {
-                    rebanadaMotos.push(datos[i])
+                    rebanadaMotos.push(datos[i]);
+                    rebanadaMarcas.push(datosMarca[i]);
                 }
-                return rebanadaMotos;
+                return [rebanadaMotos,rebanadaMarcas];
             }
         }
 
@@ -167,12 +170,13 @@ const inventario = {
 
         function renderizar() {
             document.querySelector('.newsCards').innerHTML = '';
-            const rebanadaDatos = obtenerRebanadaDeBaseDeDatos(paginaActual);
+            let [rebanadaDatos,rebanadaMarcas] = obtenerRebanadaDeBaseDeDatos(paginaActual);
+            console.log(rebanadaDatos,rebanadaMarcas)
             gestionarBotones();
             // Crear un artículo para cada elemento que se encuentre en la página actual
             for (k = 0; k < rebanadaDatos.length; k++){
                 const div = document.createElement("div");
-                div.innerHTML = `<div class="card"><img src="${rebanadaDatos[k][4]}"alt="cards"><h3>${datosMarca[k]}<span>${rebanadaDatos[k][2]}</span></h3><ul><li>Modelo: ${datos[k][1]}</li><li>Cilindraje: ${rebanadaDatos[k][3]}cc</li><li>Kilometraje: ${rebanadaDatos[k][5]}</li></ul><br><p>Precio: ${rebanadaDatos[k][5].toLocaleString('es-ES')} COP</p><hr><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a></div>`;
+                div.innerHTML = `<div class="card"><img src="${rebanadaDatos[k][4]}"alt="cards"><h3>${rebanadaMarcas[k]}<span>${rebanadaDatos[k][2]}</span></h3><ul><li>Modelo: ${datos[k][1]}</li><li>Cilindraje: ${rebanadaDatos[k][3]}cc</li><li>Kilometraje: ${rebanadaDatos[k][5]}</li></ul><br><p>Precio: ${rebanadaDatos[k][5].toLocaleString('es-ES')} COP</p><hr><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a></div>`;
                 element.appendChild(div);
             }
         }
@@ -182,7 +186,7 @@ const inventario = {
         botonAtrasDOM1.addEventListener("click", retrocederPagina);
         botonSiguienteDOM1.addEventListener("click", avanzarPagina);
         renderizar();
-        console.log(paginaActual)
+        console.log(datosMarca)
 
 //BARRA DE BUSQUEDA
     //borrar caja de texto
@@ -199,7 +203,7 @@ const inventario = {
     //llamado con el boton de busqueda
     const callToSearch = () => {
         let letter = document.querySelector('#textNav');
-        document.querySelectorAll('.card').forEach(el => el.textContent.toLowerCase().includes(letter.value)?console.log('encontre'):console.log("rechace")
+        document.querySelectorAll('.card').forEach(el => el.textContent.toLowerCase().includes(letter.value)?el.classList.remove('filter'):el.classList.add('filter')
         )
     }
     let buttonFilter = document.querySelector('#callToSearch');
