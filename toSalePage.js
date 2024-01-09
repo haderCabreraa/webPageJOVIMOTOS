@@ -46,8 +46,9 @@ const inventario = [
         "referencia": "VANI MIX", 
         "cilindraje": 110,      
         "foto":"img/moto4.jpeg",
-        "precio": 2300000,
-        "kilometraje": 23000,
+        "precio": 2800000,
+        "kilometraje": 28000,
+        "color":"azul",
     },
     {
         "marca": "honda",
@@ -150,7 +151,6 @@ const generarDatos = function(toPrint) {
         //LLAMADO INICIAL A LA FUNCIONA DE PAGINACION, RECIBE EL ARREGLO QUE VOY A RECORRER
         renderizar(inventario);
 
-
     //callToSearch Button NAVEGACION
         //llamado con el boton de busqueda
         const callToSearch = () => {
@@ -162,7 +162,7 @@ const generarDatos = function(toPrint) {
                 inventario.forEach(element => {
                     JSON.stringify(element).toLowerCase().includes(inputs)?toCut.push(element):console.log("rechace")
                 });
-                generarDatos(toCut)  
+                generarDatos(toCut); 
             });
 
         }
@@ -182,12 +182,22 @@ const generarDatos = function(toPrint) {
 
     //FILTRADO LEFT
     function filtrar(e) {
+        //PARA LOS PRECIOS
         if (e.target.innerText.length >= 15) {
+            let numero = new Array();
             let arrPrice = e.target.innerText.split(' - ');
             arrPrice.forEach(valor => {
-                let numero = valor.replace("'","").replace(".","");
+                numero.push(valor.replace("'","").replace(".",""));
             });
+            inventario.forEach(element => {
+                if (element.precio >= Number(numero[0]) && element.precio <= Number(numero[1])) {
+                    console.log("AGREGAR A ALEMENTO PAR AIMPRIMRIR");
+                }        
+            });
+
+
         }
+        //RESTO DE FILTRADO
         let toCut = new Array();
         let letter = e.target.innerText;
         let input = letter.toLowerCase();
