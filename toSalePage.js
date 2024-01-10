@@ -7,6 +7,16 @@ const inventario = [
         "cilindraje": 171, 
         "foto": "img/moto1.jpeg",
         "precio": 2300000,
+        "kilometraje": 53000,
+    },
+    {
+        "marca": "yamaha",
+        "nombre": "fz", 
+        "modelo": 2022, 
+        "referencia": "fazer", 
+        "cilindraje": 150, 
+        "foto": "img/moto2.jpeg",
+        "precio": 4300000,
         "kilometraje": 23000,
     },
     {
@@ -16,17 +26,7 @@ const inventario = [
         "referencia": "fazer", 
         "cilindraje": 150, 
         "foto": "img/moto2.jpeg",
-        "precio": 2300000,
-        "kilometraje": 23000,
-    },
-    {
-        "marca": "yamaha",
-        "nombre": "fz", 
-        "modelo": 2022, 
-        "referencia": "fazer", 
-        "cilindraje": 150, 
-        "foto": "img/moto2.jpeg",
-        "precio": 2300000,
+        "precio": 3300000,
         "kilometraje": 23000,
     },
     {
@@ -36,7 +36,7 @@ const inventario = [
         "referencia": "03", 
         "cilindraje": 299, 
         "foto": "img/moto3.jpeg",
-        "precio": 2300000,
+        "precio": 8300000,
         "kilometraje": 23000,
     },
     {
@@ -67,7 +67,7 @@ const inventario = [
         "referencia": "CB-660", 
         "cilindraje": 660, 
         "foto":"img/moto3.jpeg",
-        "precio": 2300000,
+        "precio": 4200000,
         "kilometraje": 23000,
     }
 ]
@@ -184,28 +184,33 @@ const generarDatos = function(toPrint) {
     function filtrar(e) {
         //PARA LOS PRECIOS
         if (e.target.innerText.length >= 15) {
+            let motosPrice = new Array(); //array de motos que estan en el rango de precio
             let numero = new Array();
             let arrPrice = e.target.innerText.split(' - ');
             arrPrice.forEach(valor => {
                 numero.push(valor.replace("'","").replace(".",""));
             });
+            console.log(numero)
             inventario.forEach(element => {
                 if (element.precio >= Number(numero[0]) && element.precio <= Number(numero[1])) {
-                    console.log("AGREGAR A ALEMENTO PAR AIMPRIMRIR");
-                }        
+                   motosPrice.push(element); 
+                }
             });
-
-
-        }
-        //RESTO DE FILTRADO
-        let toCut = new Array();
-        let letter = e.target.innerText;
-        let input = letter.toLowerCase();
-            inventario.forEach(element => {
-                JSON.stringify(element).toLowerCase().includes(input)?toCut.push(element):console.log("rechace")
-            });
+            console.log(motosPrice) 
+            generarDatos(motosPrice)
+        } else {
+            //RESTO DE FILTRADO
+            let toCut = new Array();
+            let letter = e.target.innerText;
+            let input = letter.toLowerCase();
+                inventario.forEach(element => {
+                    JSON.stringify(element).toLowerCase().includes(input)?toCut.push(element):console.log("rechace")
+                });
             generarDatos(toCut)  
+        }
+
     }
+
     const marcas = document.querySelector('.filterMarcas');
     const colores = document.querySelector('.filterColor');
     const precios = document.querySelector('.filterPrice');
