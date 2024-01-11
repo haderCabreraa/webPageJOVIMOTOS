@@ -405,6 +405,10 @@ background-color: rgb(79, 185, 251);
         line-height: 1.8rem;
         padding-top: 10px;
     }
+    #ssddaa {
+        width: 20px;
+        overflow: hidden;
+    }
 }
 
 @media screen and (max-width:356px){
