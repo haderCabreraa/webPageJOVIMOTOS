@@ -6,8 +6,11 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
 
+}
+body{
+    max-width: calc(100vw - 0);
+}
 a{
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
@@ -19,9 +22,10 @@ ul {
 }
 .container-general {
     display: grid;
-    width: 100vw;
+    width: calc(100vw - 0);
     grid-template-columns: 20% auto;
     grid-template-rows: auto 90px auto auto;
+
 
 }
 
@@ -41,8 +45,7 @@ ul {
     background-color: #fff;
     border-bottom: 4px solid #f73149;
     position: fixed;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
 }
 .nav-brand {
     width: 90px;
@@ -97,12 +100,14 @@ ul {
 
 /*DISEÑO MAIN*/
 .central{
+
     border-bottom: 4px solid #b6846b;
     display: grid;
     grid-template-rows: 20px auto 20px;
     height: 100%;
     text-align: center;
     padding: 10px 0;
+
 }
 #contenedorNav{
     grid-row: 2 / 3;
@@ -354,6 +359,7 @@ background-color: rgb(79, 185, 251);
         font-size: 1.8rem;
     }
 
+    
     /**/
     .container-general {
         grid-template-columns: 30% auto;
@@ -376,7 +382,7 @@ background-color: rgb(79, 185, 251);
             width: 100%;
         }
         .nav-main {
-            width: 100%;
+            width: 98%;
         }
         /*ARREGLANDO TAMAÑO INPUT*/
         #contenedorNav {
@@ -402,3 +408,4 @@ background-color: rgb(79, 185, 251);
     }
 
 }
+
