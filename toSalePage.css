@@ -356,9 +356,8 @@ background-color: rgb(79, 185, 251);
     .showcase p {
         font-size: 1.8rem;
     }
-}
 
-@media screen and (max-width:480px){
+    /**/
     .container-general {
         grid-template-columns: 30% auto;
     }
@@ -394,9 +393,13 @@ background-color: rgb(79, 185, 251);
     }
     .container-general{
         margin: 0;
+        width: 100vw;
     }
     #ssddaa {
         width: 20px;
         overflow: hidden;
+    }
+    body {
+        background-color: #f73149;
     }
 }
