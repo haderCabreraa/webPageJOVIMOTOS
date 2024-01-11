@@ -217,3 +217,12 @@ const generarDatos = function(toPrint) {
     marcas.addEventListener("click", filtrar, false);
     colores.addEventListener("click", filtrar, false);
     precios.addEventListener("click", filtrar, false);
+
+
+    //menu hamburguesa
+
+        //ESCUCHA DE BOTON HAMBURGUESA
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle("show")
+        });
+    

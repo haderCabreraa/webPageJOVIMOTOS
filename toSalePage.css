@@ -248,9 +248,14 @@ p {
     text-align: center;
 }
 /*DISEÑO BUSCADOR*/
+#contenedorNav {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 100%;
+}
 .container-search{
 width: 60vw;
-height: 90px;
+height: 100px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -303,10 +308,7 @@ opacity: 0.3;
 #callToSearch {
 background-color: rgb(79, 185, 251);
 }
-#contenedorNav {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
+
 /*PARA EL FILTRADO*/
 .filter {
     display: none;
@@ -325,11 +327,7 @@ background-color: rgb(79, 185, 251);
 
 @media screen and (max-width:480px){
     /*REORGANIZAR PAGINA*/
-    .container-general {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(4,auto);
-    }
+
     .menu-btn {
         display: block;
     }
@@ -340,7 +338,7 @@ background-color: rgb(79, 185, 251);
         left: 0;
         background-color: #cacac8;
         opacity: 0.9;
-        height: 100vh;
+        height: calc(100vh + 110px) ;
         transform: translateX(-500px);
         transition: transform 0.4s ease-in-out;
         padding: 30px;
@@ -356,52 +354,41 @@ background-color: rgb(79, 185, 251);
     }
     .showcase p {
         font-size: 1.8rem;
-    }
-    .search-box {
-        width: 100% ;
-    }
-    .container-search {
-        width: 150px;
     }
 }
-@media screen and (min-width:480px) and (max-width:620px){
-    .menu-btn {
-        display: block;
+
+@media screen and (max-width:480px){
+    .container-general {
+        grid-template-columns: 30% auto;
     }
-    .nav-main ul.nav-menu {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #cacac8;
-        opacity: 0.9;
-        height: 100vh;
-        transform: translateX(-500px);
-        transition: transform 0.4s ease-in-out;
-        padding: 30px;
+    .filtros {
+        font-size: 1.3rem;
+        padding-left: 5px;
+        margin: 0;
     }
-    .nav-main ul.nav-menu.show {
-        transform: translateX(-50px);
+    .filtros ul li {
+        padding-left: 3px;
+        font-size: 1.2rem;
     }
-    .nav-main ul.nav-menu li {
-        padding: 20px; 
+    .filtros ul {
+        padding: 0;
     }
-    .nav-main ul.nav-menu-rigth {
-        margin-right: 50px;
+    /*INTENTADO ACOMODAR EL ENCABEZADO*/
+    #encabezadoo {
+        width: 100vw;
     }
-    .showcase p {
-        font-size: 1.8rem;
+    .nav-main{
+        width: 100%;
     }
-    .search-box {
-        width: 100% ;
+    /*ARREGLANDO TAMAÑO INPUT*/
+    #contenedorNav {
+        width: 100%;
     }
-    .container-search {
-        width: 200px;
-    }
-    .search-box {
-        width: 100% ;
+    #textNav {
+        width: 180px;
     }
     .container-search {
-        width: 200px;
-    }  
+        width: 100%;
+        padding: 0;
+    }
 }
