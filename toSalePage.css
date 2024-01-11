@@ -401,7 +401,10 @@ background-color: rgb(79, 185, 251);
     .newsCards {
         grid-template-columns: auto;
     }
-
+    .filtros > ul.filterPrice li {
+        line-height: 1.8rem;
+        padding-top: 10px;
+    }
 }
 
 @media screen and (max-width:356px){
