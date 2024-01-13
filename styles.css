@@ -396,4 +396,14 @@ ul {
         .copyr{
             font-size: 0.76rem;
         }
+        body {
+            background-color: #f73149;
+        }
+        .container {
+            width: 100vw;
+            margin: 0;
+        }
+        .nav-main {
+            width: 100%;
+        }
     }
