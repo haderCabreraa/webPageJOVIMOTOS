@@ -318,6 +318,30 @@ ul {
         }
 
     @media (max-width:768px) {
+        .menu-btn {
+            display: block;
+        }
+        .nav-main ul.nav-menu {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #cacac8;
+            opacity: 0.9;
+            height: 100vh;
+            transform: translateX(-500px);
+            transition: transform 0.4s ease-in-out;
+            padding: 30px;
+        }
+        .nav-main ul.nav-menu.show {
+            transform: translateX(-50px);
+        }
+        .nav-main ul.nav-menu li {
+            padding: 20px; 
+        }
+        .nav-main ul.nav-menu-rigth {
+            margin-right: 50px;
+        }
         .newsCards {
             height: auto;
             display: flex;
@@ -340,7 +364,23 @@ ul {
         body {
             background-color: blue;
         }
+        /*COPIADO DE PANTALLA PQUEÑA*/
+            /*TAMAÑO GENERAL*/
+            .container {
+                width: 100vw;
+                margin: 0;
+            }
+            .nav-main {
+                width: 100%;
+            }
+        .showcase {
+            font-size: 2.5rem;
+        }
     }
+
+
+
+
     @media screen and (max-width:480px){
         .menu-btn {
             display: block;
@@ -398,6 +438,7 @@ ul {
         }
         body {
             background-color: #f73149;
+            width: 100vw;
         }
         .container {
             width: 100vw;
