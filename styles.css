@@ -346,16 +346,17 @@ ul {
             height: auto;
             display: flex;
             flex-wrap: wrap;
-            width: 80%;
-            margin: 0 auto;
+            width: 100%;
             margin-bottom: 15px;
+            justify-content: center;
+
         }
         .newsCards div:hover {
-            width: max-content;
-            height: 525px;
+            width: 46%;
+            height: auto;
         }
-        .servicios div {
-            width: 45%;
+        .newsCards div{
+            width: 40%;
         }
         .newsCards p {
             font-size: 1.4rem;
@@ -371,15 +372,19 @@ ul {
                 margin: 0;
             }
             .nav-main {
-                width: 100%;
+                width: 100vw;
             }
         .showcase {
             font-size: 2.5rem;
         }
+        .search-box {
+            width: auto ;
+        }
+        .servicios div {
+            width: 46%;
+            height: auto;
+        }
     }
-
-
-
 
     @media screen and (max-width:480px){
         .menu-btn {
@@ -408,18 +413,20 @@ ul {
         }
         .showcase {
             display: block;
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             text-align: center;
         }
         .search-box {
             width: auto ;
         }
+
         .newsCards div:hover {
             width: max-content;
             height: auto;
         }
         .newsCards div {
             padding-bottom: 15px;
+            width: 80%;
         }
         .servicios  div {
             width: 90%;
@@ -433,9 +440,13 @@ ul {
         .servicios div {
             width: 90%;
         }
-        .copyr{
-            font-size: 0.76rem;
-        }
+        /*TEXTO SHOWCASE*/
+            .copyr{
+                font-size: 0.76rem;
+            }
+            .resaltar {
+                font-size: 3.5rem;
+            }
         body {
             background-color: #f73149;
         }
@@ -445,5 +456,9 @@ ul {
         }
         .nav-main {
             width: 100%;
+        }
+        /*BARRA NAVEGACION*/
+        #textNav {
+            width: 45%;
         }
     }
