@@ -352,11 +352,11 @@ ul {
 
         }
         .newsCards div:hover {
-            width: 46%;
+            width: 32%;
             height: auto;
         }
         .newsCards div{
-            width: 40%;
+            width: 30%;
         }
         .newsCards p {
             font-size: 1.4rem;
