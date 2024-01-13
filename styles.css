@@ -461,4 +461,8 @@ ul {
         #textNav {
             width: 45%;
         }
+        #footer_ocultar {
+            display: none;
+            font-size: 2.4rem;
+        }
     }

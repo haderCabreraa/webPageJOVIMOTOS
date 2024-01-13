@@ -434,4 +434,7 @@ background-color: rgb(79, 185, 251);
         display: flex;
         flex-wrap: wrap;
     }
+    #footer_ocultar {
+        display: none;
+    }
 }
