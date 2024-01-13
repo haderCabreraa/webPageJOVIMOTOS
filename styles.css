@@ -337,6 +337,9 @@ ul {
             font-size: 1.4rem;
             padding: 0 30px;
         }
+        body {
+            background-color: blue;
+        }
     }
     @media screen and (max-width:480px){
         .menu-btn {
@@ -363,10 +366,34 @@ ul {
         .nav-main ul.nav-menu-rigth {
             margin-right: 50px;
         }
-        .showcase p {
+        .showcase {
+            display: block;
             font-size: 1.8rem;
+            text-align: center;
         }
         .search-box {
             width: auto ;
+        }
+        .newsCards div:hover {
+            width: max-content;
+            height: auto;
+        }
+        .newsCards div {
+            padding-bottom: 15px;
+        }
+        .servicios  div {
+            width: 90%;
+        }
+        .servicios{
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+            gap: 15px;
+        }
+        .servicios div {
+            width: 90%;
+        }
+        .copyr{
+            font-size: 0.76rem;
         }
     }
