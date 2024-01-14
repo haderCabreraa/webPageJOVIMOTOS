@@ -9,7 +9,8 @@ body{
 
 }
 body{
-    width: 100vw;
+    width: 98vw;
+    margin: auto;
 }
 a{
     font-family: 'Montserrat', sans-serif;
@@ -45,7 +46,7 @@ ul {
     border-bottom: 4px solid #f73149;
     border-bottom-width: 0px;
     position: fixed;
-    width: 100%;
+    width: 98vw;
 }
 .nav-brand {
     width: 90px;
@@ -86,7 +87,7 @@ ul {
 }
 /*COPYRIGHT*/
     .copyr{
-        width: 100vw;
+        width: 98vw;
     }
 
 /*DISEÑO LEFT*/
