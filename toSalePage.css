@@ -9,7 +9,7 @@ body{
 
 }
 body{
-    max-width: 100vw;
+    width: 100vw;
 }
 a{
     font-family: 'Montserrat', sans-serif;
@@ -22,7 +22,7 @@ ul {
 }
 .container-general {
     display: grid;
-    width:100vw;
+    width:100%;
     grid-template-columns: 20% auto;
     grid-template-rows: auto 90px auto auto;
 }
@@ -98,22 +98,24 @@ ul {
 }
 .filtros li ul li{
     cursor: pointer;
+    padding-left: 5px;
 }
 .filtros li ul li:hover{
-
     background-color: #cacac8;
 }
 .filtros li ul {
     padding-left: 5px;
-
 }
 
 /*DISEÑO MAIN*/
 .colorear button {
-    padding: 10px;
+    padding: 7px;
     background-color: #222222;
     color: #fff;
     cursor: pointer;
+}
+.colorear button:hover {
+    opacity: 0.8;
 }
 .central{
     border-bottom: 4px solid #b6846b;
@@ -331,9 +333,7 @@ background-color: rgb(79, 185, 251);
 }
 
 /*PARA EL FILTRADO*/
-.filter {
-    display: none;
-}
+
 /*MENU HAMBURGUESA*/
 /*BOTON HAMBURGUESA*/
 .menu-btn {
@@ -426,7 +426,6 @@ background-color: rgb(79, 185, 251);
     }
     .filtros > ul li:hover {
         background-color: #4a4848;
-
     }
     .nav > li {
         float: left;
@@ -452,8 +451,14 @@ background-color: rgb(79, 185, 251);
     .tittle-footer{
         font-size: 2.8em;
     }
+    .filtros li ul li {
+        padding-left: 5px;
+        margin:3px 0;
+    }
+    .filtros li ul:hover {
+        background-color: #4a4848;
+    }
 }
-
 @media (max-width:768px) {
     /*MENU PRINCIPAL*/
     .menu-btn {
