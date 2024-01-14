@@ -457,7 +457,7 @@ background-color: rgb(79, 185, 251);
         padding-left: 5px;
         margin:3px 0;
     }
-    .filtros li ul:hover {
+    .filtros li ul li:hover {
         background-color: #4a4848;
     }
 }
