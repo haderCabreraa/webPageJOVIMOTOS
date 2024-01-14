@@ -6,7 +6,6 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 body{
     width: 98vw;
@@ -44,7 +43,6 @@ ul {
     height: 60px;
     background-color: #fff;
     border-bottom: 4px solid #f73149;
-    border-bottom-width: 0px;
     position: fixed;
     width: 98vw;
 }
