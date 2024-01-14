@@ -362,9 +362,7 @@ ul {
             font-size: 1.4rem;
             padding: 0 30px;
         }
-        body {
-            background-color: blue;
-        }
+
         /*COPIADO DE PANTALLA PQUEÑA*/
             /*TAMAÑO GENERAL*/
             .container {
@@ -447,9 +445,7 @@ ul {
             .resaltar {
                 font-size: 3.5rem;
             }
-        body {
-            background-color: #f73149;
-        }
+
         .container {
             width: 100vw;
             margin: 0;
