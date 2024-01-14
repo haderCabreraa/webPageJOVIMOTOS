@@ -98,10 +98,12 @@ const generarDatos = function(toPrint) {
     //PAGINACION
         function avanzarPagina() {
             paginaActual++;
+            window.scrollTo(0, 0)
             renderizar(inventario);
         }
         function retrocederPagina() {
             paginaActual--;
+            window.scrollTo(0, 0)
             renderizar(inventario);
         }
         function obtenerRebanadaDeBaseDeDatos(pagina) {

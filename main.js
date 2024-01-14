@@ -1,6 +1,7 @@
 
 //BARRA DE NAVEGACION
     let probando = function() {
+        window.scrollTo(0, 0);
         //HACER APARECER TARJETA
         const templateNav = document.getElementById("navTemplate");
         const clonTemplateNav = templateNav.content.cloneNode(true);
