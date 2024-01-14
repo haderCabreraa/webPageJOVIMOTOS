@@ -416,15 +416,13 @@ background-color: rgb(79, 185, 251);
         display: none;
         position: absolute;
         min-width: max-content;
-        margin-left: -5px;
         margin-top: 8px;
     }
     .nav li:hover > ul {
         display: block;
     }
     .nav li {
-        padding: 5px 5px;
-
+        padding: 5px 1px;
     }
     /*COPYRIGHT*/
     .copyr{
