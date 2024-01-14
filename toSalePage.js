@@ -208,6 +208,7 @@ const generarDatos = function(toPrint) {
                 inventario.forEach(element => {
                     JSON.stringify(element).toLowerCase().includes(input)?toCut.push(element):console.log("rechace")
                 });
+            window.scrollTo(0, 100)
             generarDatos(toCut)  
         }
 
