@@ -96,6 +96,9 @@ ul {
 .filtros li {
     padding: 10px 0;
 }
+.filtros li ul li{
+    cursor: pointer;
+}
 .filtros li ul li:hover{
 
     background-color: #cacac8;
@@ -106,10 +109,16 @@ ul {
 }
 
 /*DISEÑO MAIN*/
+.colorear button {
+    padding: 10px;
+    background-color: #222222;
+    color: #fff;
+    cursor: pointer;
+}
 .central{
     border-bottom: 4px solid #b6846b;
     display: grid;
-    grid-template-rows: 20px auto 20px;
+    grid-template-rows: max-content auto max-content;
     height: 100%;
     text-align: center;
     padding: 10px 0;
@@ -124,6 +133,7 @@ ul {
 
 .botones1{
     grid-row: 1 /2;
+
 }
 .botones2{
     grid-row: 3 /4;
@@ -143,7 +153,8 @@ ul {
     border-top-left-radius: 10px;
     background-color: #fff;
     text-align: right;
-    height: 450px;
+    height: max-content;
+    padding-bottom: 15px;
 }
 .newsCards > article:hover {
     box-shadow: 0px 10px 30px 2px #000010 ;
@@ -402,6 +413,7 @@ background-color: rgb(79, 185, 251);
     /*CREANDO MENU DESPLEGABLE*/
     .filtros{
         margin: auto;
+        margin-bottom: 30px;
     }
     .filtros > ul li {
         font-size: 1.3rem;
