@@ -322,6 +322,9 @@ ul {
         }
 
     @media (max-width:768px) {
+        body{
+            margin: 0;
+        }
         .menu-btn {
             display: block;
         }

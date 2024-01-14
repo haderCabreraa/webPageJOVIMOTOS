@@ -177,6 +177,9 @@ span{
     padding-bottom: 0;
 }
 @media screen and (max-width:480px){
+    body{
+        margin: 0;
+    }
     .item2{
         flex-wrap: wrap;
     }
@@ -196,6 +199,9 @@ div h1{
     margin: 15px 0px;
 }
 @media screen and (min-width:480px) and (max-width:768px){
+    body{
+        margin: 0;
+    }
     .item2{
         font-size:0.8rem ;
     }

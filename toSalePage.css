@@ -346,6 +346,9 @@ background-color: rgb(79, 185, 251);
 }
 
 @media screen and (max-width:480px){
+    body{
+        margin: 0;
+    }
 
     .menu-btn {
         display: block;
@@ -459,6 +462,9 @@ background-color: rgb(79, 185, 251);
     }
 }
 @media (max-width:768px) {
+    body{
+        margin: 0;
+    }
     /*MENU PRINCIPAL*/
     .menu-btn {
         display: block;
