@@ -74,7 +74,7 @@ ul {
     cursor: pointer;
     padding: 10px;
 }
-/*DISEÑO LEFT*/
+/*DISEÑO LEFT
 .filtros{
     grid-row: 2 / 4;
     grid-column: 1 / 2;
@@ -96,7 +96,7 @@ ul {
 }
 .filtros > ul {
     padding-bottom: 50px;
-}
+}*/
 
 /*DISEÑO MAIN*/
 .central{
@@ -328,9 +328,7 @@ background-color: rgb(79, 185, 251);
 }
 
 @media screen and (max-width:480px){
-    body{
-        background-color: #f73149;
-    }
+
     .menu-btn {
         display: block;
     }
@@ -394,6 +392,37 @@ background-color: rgb(79, 185, 251);
         display: none;
     }
     
+    /*CREANDO MENU DESPLEGABLE*/
+    .filtros{
+        margin: auto;
+    }
+    .filtros > ul li {
+        font-size: 1.5rem;
+        background-color: #fff;
+    }
+    .nav li a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 5px;
+    }
+    .nav li a:hover {
+        background-color: #cacac8;
+    }
+    .nav > li {
+        float: left;
+    }
+    .nav li ul{
+        display: none;
+        position: absolute;
+        min-width: max-content;
+    }
+    .nav li:hover > ul {
+        display: block;
+    }
+    .nav li {
+        background-color: #222222;
+        padding: 5px 5px;
+    }
 
 }
 
