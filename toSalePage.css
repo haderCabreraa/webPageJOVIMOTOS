@@ -390,7 +390,6 @@ background-color: rgb(79, 185, 251);
     #footer_ocultar {
         display: none;
     }
-    
     /*CREANDO MENU DESPLEGABLE*/
     .filtros{
         margin: auto;
@@ -403,14 +402,15 @@ background-color: rgb(79, 185, 251);
         text-decoration: none;
         display: block;
         padding: 10px 5px;
+    }
+    .filtros > ul li:hover {
+        background-color: #4a4848;
 
     }
-
     .nav > li {
         float: left;
         margin-left: 10px;
         border-radius: 5px;
-
     }
     .nav li ul{
         display: none;
