@@ -270,6 +270,19 @@ span{
 p {
     text-align: center;
 }
+    /*FOOTER ICONS*/
+    .info-footer i {
+        font-size: 80px;
+        opacity: 0.8;
+    }
+    .info-footer ul {
+        display: flex;
+        gap: 100px;
+        justify-content: center;
+    }
+    .info-footer ul li {
+        max-width: 100px;
+    }
 /*DISEÑO BUSCADOR*/
 #contenedorNav {
     grid-column: 2 / 3;
@@ -459,6 +472,14 @@ background-color: rgb(79, 185, 251);
     .filtros li ul li:hover {
         background-color: #4a4848;
     }
+    /*FOOTER ICONS*/
+    .info-footer i {
+        font-size: 50px;
+    }
+    .info-footer ul {
+        gap: 40px;
+    }
+
 }
 @media (max-width:768px) {
     body{
