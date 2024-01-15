@@ -204,12 +204,11 @@ div h1{
         width: 100vw;
     }
     .container-footer{
-        width: 100vw;
+        width: 95%;
         padding: 0;
+        margin: 0 auto;
     }
-    .container-footer2{
-        width: 100vw;
-    }
+
     .tittle-footer span {
         font-size: 2rem;
     }
