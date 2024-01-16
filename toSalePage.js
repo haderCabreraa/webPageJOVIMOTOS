@@ -241,3 +241,8 @@ const generarDatos = function(toPrint) {
         document.querySelector('.fa-user-circle').addEventListener('click', () => {
             document.querySelector('.login-wrap').classList.toggle("showLogin")
         });
+
+//TOMAR BOTON DE REGISTRO
+const register = function() {
+    
+}

@@ -707,6 +707,7 @@ ul {
 @media screen and (min-width:480px) and (max-width:768px) {
     body{
         margin: 0;
+        width: 100vw;
     }
     .nav-main{
         width: 100vw;
