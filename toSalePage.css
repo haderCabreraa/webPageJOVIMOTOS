@@ -36,43 +36,46 @@ ul {
         height: auto;
     }
  /*SEGUNDO INTENTO DE MENU*/
- .nav-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    background-color: #fff;
-    border-bottom: 4px solid #f73149;
-    position: fixed;
-    width: 98vw;
-}
-.nav-brand {
-    width: 90px;
-}
-.nav-main ul {
-    display: flex;
-}
-.nav-main ul li {
-    padding: 10px;
-}
-.nav-main ul.nav-menu {
-    flex: 1;
-    margin-left: 50px;
-}
-.nav-main ul li a {
-    padding-bottom: 5px;
-}
+    .nav-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        background-color: #fff;
+        border-bottom: 4px solid #f73149;
+        position: fixed;
+        width: 98vw;
+    }
+    .nav-brand {
+        width: 90px;
+    }
+    .nav-main ul {
+        display: flex;
+    }
+    .nav-main ul li {
+        padding: 10px;
+    }
+    .nav-main ul.nav-menu {
+        flex: 1;
+        margin-left: 50px;
+    }
+    .nav-main ul li a {
+        padding-bottom: 5px;
+    }
 
-.nav-main ul li a:hover {
-    border-bottom: 4px solid #b6846b;
-}
-#buttonNav {
-    border: none;
-    border-radius: 5px;
-    background-color: #cacac8;
-    cursor: pointer;
-    padding: 10px;
-}
+    .nav-main ul li a:hover {
+        border-bottom: 4px solid #b6846b;
+    }
+    #buttonNav {
+        border: none;
+        border-radius: 5px;
+        background-color: #cacac8;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .nav-menu-rigth {
+        align-items: center;
+    }
 
 /*NUEVOS FILTROS*/
 .filtros{
@@ -197,8 +200,6 @@ ul {
         margin: 5px;
         display: inline-block;
     }
-    /*BOTONES DESHABILITADOS*/
-
 
 /*DISEÑO DE FOOTER*/
     footer{
@@ -435,13 +436,17 @@ ul {
         color:#fff;
         display:block;
     }
-    .login-form .group .input,
+    .login-form .group .input{
+        border:none;
+        padding:6px 20px;
+        border-radius:25px;
+        background:rgb(202, 202, 200, 0.3);
+    }
     .login-form .group .button{
         border:none;
         padding:15px 20px;
         border-radius:25px;
         background:rgb(202, 202, 200, 0.3);
-
     }
     .login-form .group input[data-type="password"]{
         text-security:circle;
@@ -521,11 +526,7 @@ ul {
         font-size: 1.62rem;
         display: none;
     }
-/*INICIO DE SESION*/
-    .sesion {
-        font-size: 30px;
-        cursor: pointer;
-    }
+
 /*ESTILO BOTON DE COMPRA*/
     #addShop{
         margin-top: 5px;
@@ -663,6 +664,7 @@ ul {
     }
     /*COPYRIGHT*/
     .copyr{
+        width: 100vw;
         font-size: 0.6rem;
     }
     .tittle-footer{
@@ -688,7 +690,7 @@ ul {
     /*RESPONSIVE LOGIN*/
         .login-wrap{
             width: 90%;
-            height: 90vh;
+            height: 85vh;
             margin: auto;
         }
         .login-html{
@@ -702,9 +704,7 @@ ul {
         }
         .login-form {
             margin-top: 10px;
-
         }
-
 }
 @media screen and (min-width:480px) and (max-width:768px) {
     body{
@@ -741,6 +741,7 @@ ul {
     /*RESPONSIVE LOGIN*/
     .login-wrap{
         width: 80%;
+        height: 85vh;
     }
     .login-html .tab{
         font-size: 1.1rem;
