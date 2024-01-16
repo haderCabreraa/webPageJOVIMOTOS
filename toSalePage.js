@@ -81,7 +81,7 @@ const generarDatos = function(toPrint) {
     }
     toPrint.forEach(element => {
         const article = document.createElement("article");
-        article.innerHTML = `<div class="card"><img src="${element.foto}"alt="cards"><h3>${element.marca}<span>${element.nombre.toUpperCase()}</span></h3><ul><li>Modelo: ${element.modelo}</li><li>Cilindraje: ${element.cilindraje}cc</li><li>Kilometraje: ${element.kilometraje}</li></ul><br><p>Precio: ${element.precio.toLocaleString('es-ES')} COP</p><hr><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a></div>`;
+        article.innerHTML = `<div class="card"><img src="${element.foto}"alt="cards"><h3>${element.marca}<span>${element.nombre.toUpperCase()}</span></h3><ul><li>Modelo: ${element.modelo}</li><li>Cilindraje: ${element.cilindraje}cc</li><li>Kilometraje: ${element.kilometraje}</li></ul><br><p>Precio: ${element.precio.toLocaleString('es-ES')} COP</p><hr><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a><div id="addShop"><button id="addShop"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Agregar al carrito</button></div></div>`;
         const deposito =  document.querySelector('.newsCards');
         deposito.appendChild(article)
     });
@@ -118,17 +118,26 @@ const generarDatos = function(toPrint) {
             if (paginaActual === 1) {
             botonAtrasDOM.setAttribute("disabled", true);
             botonAtrasDOM1.setAttribute("disabled", true);
+            botonAtrasDOM.classList.add('buttonOff');
+            botonAtrasDOM1.classList.add('buttonOff');
             } else {
             botonAtrasDOM.removeAttribute("disabled");
             botonAtrasDOM1.removeAttribute("disabled");
+            botonAtrasDOM.classList.remove('buttonOff');
+            botonAtrasDOM1.classList.remove('buttonOff');
             }
             // Comprobar que no se pueda avanzar
             if (paginaActual === obtenerPaginasTotales()) {
             botonSiguienteDOM.setAttribute("disabled", true);
             botonSiguienteDOM1.setAttribute("disabled", true);
+            botonSiguienteDOM.classList.add('buttonOff')
+            botonSiguienteDOM1.classList.add('buttonOff')
             } else {
             botonSiguienteDOM.removeAttribute("disabled");
             botonSiguienteDOM1.removeAttribute("disabled");
+            botonSiguienteDOM.classList.remove('buttonOff')
+            botonSiguienteDOM1.classList.remove('buttonOff')
+        
             }
         }
 
