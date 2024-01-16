@@ -228,4 +228,7 @@ const generarDatos = function(toPrint) {
         document.querySelector('.menu-btn').addEventListener('click', () => {
             document.querySelector('.nav-menu').classList.toggle("show")
         });
-    
+        //ESCUCHAR BOTON INICIO DE SESION 
+        document.querySelector('.fa-user-circle').addEventListener('click', () => {
+            document.querySelector('.login-wrap').classList.toggle("showLogin")
+        });
