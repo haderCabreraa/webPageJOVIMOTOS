@@ -12,6 +12,12 @@
       "user": "admin2",
       "contraseña": "admin123456",
       "correo": "hader.cabrera@m.ccomm"
+    },
+    {
+      "id": "0337",
+      "user": "KevinCamilo",
+      "contraseña": "spuknik01",
+      "correo": "juanperez.wew@as.com"
     }
   ]
 }
