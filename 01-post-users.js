@@ -13,4 +13,5 @@ export function post(url, objeto) {
       .catch((error) => {
         console.error(error);
       });
+      
   }

@@ -1,5 +1,17 @@
 {
-    "usuarios": {
-
+  "usuarios": [
+    {
+      "id": "7265",
+      "user": "admin",
+      "contraseña": "admin123",
+      "correo": "hader.cabrera@m.com",
+      "logado": true
+    },
+    {
+      "id": "7265",
+      "user": "admin2",
+      "contraseña": "admin123456",
+      "correo": "hader.cabrera@m.ccomm"
     }
+  ]
 }

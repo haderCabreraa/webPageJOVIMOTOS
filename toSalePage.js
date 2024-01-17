@@ -239,37 +239,23 @@ const generarDatos = function(toPrint) {
         });
 
 
-// //TOMAR BOTON DE REGISTRO
-// const formSingUp = document.querySelector('#singUp');
-// formSingUp.addEventListener("submit",function(event){
-//     const objectUser = new Map();
-//     event.preventDefault();
-//     const usuario = new FormData(formSingUp);
-//     objectUser.set("username",usuario.get('user'))
-//     objectUser.set("contraseña",usuario.get('contraseña'))
-//     objectUser.set("correo",usuario.get('correo'))
-//     //LLAMAR A FUNCION POST PARA PEGAR EL USUARIO
-// })
+    //LLAMAR AL METODO DE CONTROLADOR PARA REGISTRO
+        import { controlador } from "./controllers/controlador.js";
 
-//TOMAR INICIO DE SESION
-// const formSingIn = document.querySelector('#singIn');
-// formSingIn.addEventListener("submit",function(event){
-//     const objectUser = new Map();
-//     event.preventDefault();
-//     console.log(event)
-//     const usuario = new FormData(formSingIn);
-//     objectUser.set("username",usuario.get('user'))
-//     objectUser.set("contraseña",usuario.get('contraseña'))
-//     //LLAMAR A FUNCION POST PARA PEGAR EL USUARIO
-//     console.log(objectUser)
-// })
-
-//LLAMAR AL METODO DE CONTROLADOR PARA REGISTRO
-import { controlador } from "../webPageJOVIMOTOS/controllers/controlador.js";
-const formu = document.querySelector("#singUp");
-formu.addEventListener("click", (e) => {
-  e.preventDefault();
-  controlador(formu, e, "usuarios");
-  e.stopPropagation();
-});
-
+        const formu = document.querySelector("#singUp");   
+        formu.addEventListener("submit", (e) => {
+            console.log("lei registro")
+            e.preventDefault();
+            controlador(formu, e, "usuarios");
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    //LLAMAR AL METODO DE CONTROLADOR PARA INICIO DE SESION
+        const sesion = document.querySelector("#singIn");   
+        sesion.addEventListener("submit", (e) => {
+            console.log("lei inicio")
+            e.preventDefault();
+            controlador(sesion, e, "usuarios");
+            e.stopPropagation();
+            e.preventDefault();
+        });

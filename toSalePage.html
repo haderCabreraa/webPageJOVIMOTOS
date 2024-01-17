@@ -39,11 +39,11 @@
         </div>
         <!--INICIO DE SESION-->
         <div class="login-wrap showLogin">
-            <div class="login-html">
+            <div class="login-html loginOcultar">
                 <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar sesion</label>
                 <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Resgristarse</label>
                 <div class="login-form">
-                    <form id="singIn">
+                    <form id="singIn" value ="iniciarSesion">
                         <div class="sign-in-htm">
                             <div class="group">
                                 <label for="user" class="label">Nombre de usuario</label>
@@ -60,7 +60,7 @@
                         </div>
                     </form>
                     
-                    <form id="singUp">
+                    <form id="singUp" value ="registrarme">
                         <div class="sign-up-htm">
                             <div class="group">
                                 <label for="user" class="label">Nombre de usuario</label>
@@ -75,7 +75,7 @@
                                 <input name="correo" id="correo" type="text" class="input">
                             </div>
                             <div class="group">
-                                <input type="submit"  class="button" value="registrarme">
+                                <input type="submit"  class="button singUp" value="registrarme">
                             </div>
                             <div class="hr"></div>
                         </div>
@@ -197,5 +197,6 @@
         <div id="getFacture"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
     </div>
     <script src="toSalePage.js" type="module"></script>
+    <script src="controllers/controlador.js" type="module"></script>
 </body>
 </html>
