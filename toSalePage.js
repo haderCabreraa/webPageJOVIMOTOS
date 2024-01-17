@@ -265,7 +265,7 @@ const generarDatos = function(toPrint) {
 // })
 
 //LLAMAR AL METODO DE CONTROLADOR PARA REGISTRO
-import { controlador } from "./../controllers/controlador.js";
+import { controlador } from "../webPageJOVIMOTOS/controllers/controlador.js";
 const formu = document.querySelector("#singUp");
 formu.addEventListener("click", (e) => {
   e.preventDefault();
