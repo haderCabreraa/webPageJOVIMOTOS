@@ -11,6 +11,5 @@ export function patch(url) {
         .then((response) => response.json())
         .then((json) => console.log(json))
         .catch(error => console.error("Error!!!:" + error))
-    
     //AGREGA A LO QUE YA ESTA
 }

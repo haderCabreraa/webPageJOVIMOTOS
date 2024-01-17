@@ -556,8 +556,30 @@ ul {
 
     }
 /*DISEÑO DE SING IN- SING UP*/
-    .loginOcultar {
-        display: none ;
+    /*OCULTAR BOTON DE SING OUT*/
+    .ocultarBoton{ 
+        display: none;
+    }
+    /*OCULTAR TARJETAS DE INICIAR SESION*/
+    .ocultarRegistro {
+        display: none;
+    }
+    /*PERSONLIZAR TARJETA CUANDO ESTA SIGN IN*/
+    .login-wrap {
+        background-color: #000010;
+    }
+    .pintarLogin {
+        border-radius: 15px;
+        background-color: #4a4848;
+        width: 60%;
+        height: 90%;
+        color: #fff;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px 30px;
+        gap: 15px;
     }
 @media screen and (max-width:480px){
     body{

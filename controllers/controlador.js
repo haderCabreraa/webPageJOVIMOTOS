@@ -51,6 +51,7 @@ export function controlador(formu, event, entidad) {
                             bandera = true;
                             alert("Logado correctamente")
                             patch(url + '/' + usuario.id)
+                            console.log("PASEEEEEE CON:",url + '/' + usuario.id)
                             break
                         } else {
                             bandera = false;
@@ -59,10 +60,10 @@ export function controlador(formu, event, entidad) {
                     if(bandera === false) {
                         alert("Datos incorrectos,Try again")
                     }
-                }catch (error) {
+                } catch (error) {
                     // Maneja errores
                     console.error('Error al leer el archivo JSON:', error);
-                  }
+                }
             }
         loginIn(); 
     };
