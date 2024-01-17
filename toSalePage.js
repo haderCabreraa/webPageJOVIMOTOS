@@ -220,17 +220,13 @@ const generarDatos = function(toPrint) {
             window.scrollTo(0, 100)
             generarDatos(toCut)  
         }
-
     }
-
     const marcas = document.querySelector('.filterMarcas');
     const colores = document.querySelector('.filterColor');
     const precios = document.querySelector('.filterPrice');
     marcas.addEventListener("click", filtrar, false);
     colores.addEventListener("click", filtrar, false);
     precios.addEventListener("click", filtrar, false);
-
-
     //menu hamburguesa
 
         //ESCUCHA DE BOTON HAMBURGUESA
@@ -242,7 +238,38 @@ const generarDatos = function(toPrint) {
             document.querySelector('.login-wrap').classList.toggle("showLogin")
         });
 
-//TOMAR BOTON DE REGISTRO
-const register = function() {
-    
-}
+
+// //TOMAR BOTON DE REGISTRO
+// const formSingUp = document.querySelector('#singUp');
+// formSingUp.addEventListener("submit",function(event){
+//     const objectUser = new Map();
+//     event.preventDefault();
+//     const usuario = new FormData(formSingUp);
+//     objectUser.set("username",usuario.get('user'))
+//     objectUser.set("contraseña",usuario.get('contraseña'))
+//     objectUser.set("correo",usuario.get('correo'))
+//     //LLAMAR A FUNCION POST PARA PEGAR EL USUARIO
+// })
+
+//TOMAR INICIO DE SESION
+// const formSingIn = document.querySelector('#singIn');
+// formSingIn.addEventListener("submit",function(event){
+//     const objectUser = new Map();
+//     event.preventDefault();
+//     console.log(event)
+//     const usuario = new FormData(formSingIn);
+//     objectUser.set("username",usuario.get('user'))
+//     objectUser.set("contraseña",usuario.get('contraseña'))
+//     //LLAMAR A FUNCION POST PARA PEGAR EL USUARIO
+//     console.log(objectUser)
+// })
+
+//LLAMAR AL METODO DE CONTROLADOR PARA REGISTRO
+import { controlador } from "./../controllers/controlador.js";
+const formu = document.querySelector("#singUp");
+formu.addEventListener("click", (e) => {
+  e.preventDefault();
+  controlador(formu, e, "usuarios");
+  e.stopPropagation();
+});
+
