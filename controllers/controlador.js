@@ -51,10 +51,9 @@ export function controlador(formu, event, entidad) {
                             bandera = true;
                             alert("Logado correctamente")
                             patch(url + '/' + usuario.id)
-                            console.log("me logue")
                             break
                         } else {
-                            bandera = false
+                            bandera = false;
                         }
                     }
                     if(bandera === false) {

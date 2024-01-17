@@ -259,3 +259,29 @@ const generarDatos = function(toPrint) {
             e.stopPropagation();
             e.preventDefault();
         });
+
+    //SIGNOUT
+        //REEMPLAZAR VISUAL DE LOGIN DESPUES DE LOGARME
+        //TOMAR BOTON DE SIGNOUT PARA ELIMINAR ATRIBUTO "LOGADO"
+        const singOut = document.querySelector('.fa-sign-out');
+        //recorrer usuarios buscando quien esta logado para eliminar el atributo
+        singOut.addEventListener("click", (e) => {
+            e.preventDefault();
+            async function eliminarLogin() {
+                try {
+                    console.log("estoy aca")
+                    const respuesta = await fetch('http://localhost:3000/usuarios');
+                    const datosJSON = await respuesta.json();
+                    datosJSON.forEach(element => {
+                        element.hasOwnProperty("logado")?console.log("estoy intentando deslogarme")
+                        :console.log("nadie esta logado")
+                    });
+                } catch (error) {
+                    console.error('Error al leer el archivo JSON:', error);
+                }
+            }
+            //eliminarLogin();
+            e.stopPropagation();
+        });
+
+

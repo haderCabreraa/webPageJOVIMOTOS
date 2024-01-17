@@ -556,20 +556,9 @@ ul {
 
     }
 /*DISEÑO DE SING IN- SING UP*/
-/* .loginOcultar {
-    display: none;
-} */
-/* .loginMostrar {
-    display: block;
-    background-color: #222222;
-} */
-.dateUser {
-    width:100%;
-    height:100%;
-    padding:30px 70px 50px 70px;
-    background:rgba(0, 0, 0, 0.88);
-    border-bottom-left-radius: 30px;
-}
+    .loginOcultar {
+        display: none ;
+    }
 @media screen and (max-width:480px){
     body{
         width: 100vw;
