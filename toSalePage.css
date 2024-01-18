@@ -785,7 +785,9 @@ ul {
 }
 
 /*FACTURA CARRITO*/
-
+#containerFacture{
+    position: fixed;
+}
 .probando{
     border-bottom-left-radius: 15px;
     display: grid;
