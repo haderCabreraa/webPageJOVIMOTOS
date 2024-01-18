@@ -169,6 +169,7 @@ ul {
     }
         .newsCards img {
         width: 100%;
+        height: 225px;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom: 5px solid #000010;
@@ -181,7 +182,7 @@ ul {
     .newsCards p {
         text-align: justify;
         padding: 5px 15px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .newsCards a {
     text-transform: uppercase;

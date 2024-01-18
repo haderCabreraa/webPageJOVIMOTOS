@@ -8,23 +8,43 @@
       "logado": true,
       "carrito": [
         {
-          "marca": "yamaha",
-          "nombre": "fz",
+          "marca": "Bajaj",
+          "nombre": "boxer",
+          "modelo": 1997,
+          "referencia": "DT175",
+          "cilindraje": 171,
+          "foto": "img/moto1.jpeg",
+          "precio": 2300000,
+          "kilometraje": 53000
+        },
+        {
+          "marca": "honda",
+          "nombre": "cb-150",
           "modelo": 2022,
-          "referencia": "fazer",
-          "cilindraje": 150,
-          "foto": "img/moto2.jpeg",
-          "precio": 4300000,
+          "referencia": "CB-660",
+          "cilindraje": 660,
+          "foto": "img/moto10.jpg",
+          "precio": 4200000,
           "kilometraje": 23000
         },
         {
-          "marca": "yamaha",
-          "nombre": "fz",
+          "marca": "Ducati",
+          "nombre": "multistrada",
           "modelo": 2022,
-          "referencia": "fazer",
-          "cilindraje": 150,
-          "foto": "img/moto2.jpeg",
-          "precio": 3300000,
+          "referencia": "CB-660",
+          "cilindraje": 660,
+          "foto": "img/moto6.jpg",
+          "precio": 4200000,
+          "kilometraje": 23000
+        },
+        {
+          "marca": "Yamaha",
+          "nombre": "xtz",
+          "modelo": 2023,
+          "referencia": "TWISTER",
+          "cilindraje": 125,
+          "foto": "img/moto5.jpg",
+          "precio": 7900000,
           "kilometraje": 23000
         }
       ]

@@ -2,64 +2,113 @@ const inventario = [
     {
         "marca": "Bajaj",
         "nombre": "boxer",
-        "modelo": 1997, 
+        "modelo": 2016, 
         "referencia": "DT175", 
         "cilindraje": 171, 
         "foto": "img/moto1.jpeg",
-        "precio": 2300000,
+        "precio": 4300000,
         "kilometraje": 53000,
+        "color":"azul"
     },
     {
         "marca": "Akt",
         "nombre": "dynamic", 
         "modelo": 2022, 
         "referencia": "fazer", 
-        "cilindraje": 150, 
+        "cilindraje": 110, 
         "foto": "img/moto2.jpeg",
-        "precio": 4300000,
+        "precio": 2300000,
         "kilometraje": 23000,
+        "color":"rojo"
     },
     {
         "marca": "Yamaha",
         "nombre": "crypton",
         "modelo": 2022, 
         "referencia": "03", 
-        "cilindraje": 299, 
+        "cilindraje": 125, 
         "foto": "img/moto3.jpeg",
-        "precio": 8300000,
+        "precio": 5300000,
         "kilometraje": 23000,
+        "color":"negro"
     },
     {
         "marca": "Susuki",
         "nombre": "VIVA-R", 
         "modelo": 2020, 
         "referencia": "VANI MIX", 
-        "cilindraje": 110,      
+        "cilindraje": 125,      
         "foto":"img/moto4.jpeg",
-        "precio": 2800000,
+        "precio": 3700000,
         "kilometraje": 28000,
-        "color":"azul",
+        "color":"negro"
     },
     {
-        "marca": "honda",
-        "nombre": "CBX", 
+        "marca": "Yamaha",
+        "nombre": "xtz", 
         "modelo": 2023, 
         "referencia": "TWISTER", 
-        "cilindraje": 250, 
-        "foto":"img/moto3.jpeg",
-        "precio": 2300000,
+        "cilindraje": 125, 
+        "foto":"img/moto5.jpg",
+        "precio": 7900000,
         "kilometraje": 23000,
+        "color":"negro"
+    },
+    {
+        "marca": "Ducati",
+        "nombre": "multistrada", 
+        "modelo": 2022, 
+        "referencia": "CB-660", 
+        "cilindraje": 800, 
+        "foto":"img/moto6.jpg",
+        "precio": 56000000,
+        "kilometraje": 23000,
+        "color":"rojo"
     },
     {
         "marca": "honda",
-        "nombre": "CB", 
+        "nombre": "cb-660", 
         "modelo": 2022, 
         "referencia": "CB-660", 
         "cilindraje": 660, 
-        "foto":"img/moto3.jpeg",
-        "precio": 4200000,
+        "foto":"img/moto7.jpg",
+        "precio": 39000000,
+        "kilometraje": 39000,
+        "color":"negro"
+    },
+    {
+        "marca": "honda",
+        "nombre": "cb-160", 
+        "modelo": 2022, 
+        "referencia": "CB-660", 
+        "cilindraje": 160, 
+        "foto":"img/moto8.jpg",
+        "precio": 5600000,
         "kilometraje": 23000,
-    }
+        "color":"blanco"
+    },
+    {
+        "marca": "honda",
+        "nombre": "wave", 
+        "modelo": 2022, 
+        "referencia": "CB-660", 
+        "cilindraje": 110, 
+        "foto":"img/moto9.jpg",
+        "precio": 3000000,
+        "kilometraje": 23000,
+        "color":"negra"
+    },
+    {
+        "marca": "honda",
+        "nombre": "cb-150", 
+        "modelo": 2022, 
+        "referencia": "CB-660", 
+        "cilindraje": 150, 
+        "foto":"img/moto10.jpg",
+        "precio": 4800000,
+        "kilometraje": 23000,
+        "color":"negro"
+    },
 ]
 
 //IMPRIMIR FACTURA
@@ -169,7 +218,7 @@ const generarDatos = function(toPrint) {
         const botonSiguienteDOM = document.querySelector(".siguiente");
         const botonAtrasDOM1 = document.querySelector(".atras1");
         const botonSiguienteDOM1 = document.querySelector(".siguiente1");
-        const elementosPorPagina = 3;
+        const elementosPorPagina = 4;
         let paginaActual = 1;
 
     //PAGINACION
