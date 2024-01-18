@@ -117,7 +117,8 @@ carrito.addEventListener("click", (e) => {
     console.log("lei carrito")
     e.preventDefault();
     const producto = JSON.parse(window.localStorage.getItem('id')).productos;
-    document.querySelector("#factura").classList.toggle('ocultarr')
+    //document.querySelector("#factura").classList.toggle('ocultarr')
+    document.querySelector("#containerFacture").classList.toggle('ocultarr')
     factura();
     compara();
     console.log(producto)

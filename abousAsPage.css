@@ -195,105 +195,6 @@ div h1{
     text-align: center;
     padding-bottom: 0;
 }
-@media screen and (max-width:480px){
-    body{
-        margin: 0;
-        width: 100vw;
-    }
-    .nav-main{
-        width: 100vw;
-    }
-    .container-footer{
-        width: 95%;
-        padding: 0;
-        margin: 0 auto;
-    }
-
-    .tittle-footer span {
-        font-size: 2rem;
-    }
-    .tittle-footer{
-        font-size: 2rem;
-    }
-    /*NAVEGACION*/
-        .menu-btn {
-            display: block;
-        }
-        .nav-main ul.nav-menu {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: #cacac8;
-            opacity: 0.9;
-            height: 100vh;
-            transform: translateX(-500px);
-            transition: transform 0.4s ease-in-out;
-            padding: 30px;
-        }
-        .nav-main ul.nav-menu.show {
-            transform: translateX(-50px);
-        }
-        .nav-main ul.nav-menu li {
-            padding: 20px; 
-        }
-        .nav-main ul.nav-menu-rigth {
-            margin-right: 50px;
-        }
-
-    .item2{
-        flex-wrap: wrap;
-    }
-    .item2 > div:hover{
-        padding: 5px;
-        font-size: 0.9rem;
-    }
-    .copyr{
-        font-size: 0.55rem;
-        text-align: center;
-    }
-    p{
-        font-size: .8rem;
-    }
-    #history, #mision,#vision {
-        padding: 5px 20px;
-    }
-
-}
-
-@media screen and (min-width:480px) and (max-width:768px){
-    body{
-        margin: auto;
-    }
-    .item2{
-        font-size:0.8rem ;
-    }
-    /*NAVEGACION*/
-    .menu-btn {
-        display: block;
-    }
-    .nav-main ul.nav-menu {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #cacac8;
-        opacity: 0.9;
-        height: 100vh;
-        transform: translateX(-500px);
-        transition: transform 0.4s ease-in-out;
-        padding: 30px;
-    }
-    .nav-main ul.nav-menu.show {
-        transform: translateX(-50px);
-    }
-    .nav-main ul.nav-menu li {
-        padding: 20px; 
-    }
-    .nav-main ul.nav-menu-rigth {
-        margin-right: 50px;
-    }
-}
 /*ALINEAR ICONOS DE SESION*/
 .nav-menu-rigth {
     align-items: center;
@@ -494,3 +395,177 @@ a{color:inherit;text-decoration:none}
         padding: 50px 30px;
         gap: 15px;
     }
+
+@media screen and (max-width:480px){
+    body{
+        margin: 0;
+        width: 100vw;
+    }
+    .nav-main{
+        width: 100vw;
+    }
+    .container-footer{
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .tittle-footer span {
+        font-size: 2rem;
+    }
+    .tittle-footer{
+        font-size: 2rem;
+    }
+    /*NAVEGACION*/
+        .menu-btn {
+            display: block;
+        }
+        .nav-main ul.nav-menu {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #cacac8;
+            opacity: 0.9;
+            height: 100vh;
+            transform: translateX(-500px);
+            transition: transform 0.4s ease-in-out;
+            padding: 30px;
+        }
+        .nav-main ul.nav-menu.show {
+            transform: translateX(-50px);
+        }
+        .nav-main ul.nav-menu li {
+            padding: 20px; 
+        }
+        .nav-main ul.nav-menu-rigth {
+            margin-right: 50px;
+        }
+
+    .item2{
+        flex-wrap: wrap;
+    }
+    .item2 > div:hover{
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+    .copyr{
+        font-size: 0.55rem;
+        text-align: center;
+    }
+    p{
+        font-size: .8rem;
+    }
+    #history, #mision,#vision {
+        padding: 5px 20px;
+    }
+    /*FOOTER ICONS*/
+    .info-footer i {
+        font-size: 50px;
+    }
+    .info-footer ul {
+        gap: 40px;
+    }
+    .info-footer ul li {
+        font-size: 0.5rem;
+    }
+    /*RESPONSIVE LOGIN*/
+        .login-wrap{
+            width: 90%;
+            height: 85vh;
+            margin: auto;
+        }
+        .login-html{
+            padding: 10px 20px 20px 20px;
+        }
+        .login-html .tab{
+            font-size: 0.9rem;
+        }
+        .login-form .group .input {
+            padding: 8px 30px;
+        }
+        .login-form {
+            margin-top: 10px;
+        }
+/*RESPONSIVE FACTURA*/
+    .probando {
+        display: block;
+        font-size: 0.5rem;
+    }
+    .probando img{
+        max-width: 80px;
+    }
+    .probando > div {
+        font-size: 0.6rem;
+        display: flex;
+        flex-direction: column;
+    }
+    #containerFacture:hover{
+        font-size: 1rem;
+    }
+/*RESPONSIVE DATOS USUSARIOP*/
+.pintarLogin {
+    font-size: 0.8rem;
+}
+}
+
+@media screen and (min-width:480px) and (max-width:768px){
+    body{
+        margin: auto;
+    }
+    .item2{
+        font-size:0.8rem ;
+    }
+    /*NAVEGACION*/
+    .menu-btn {
+        display: block;
+    }
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #cacac8;
+        opacity: 0.9;
+        height: 100vh;
+        transform: translateX(-500px);
+        transition: transform 0.4s ease-in-out;
+        padding: 30px;
+    }
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-50px);
+    }
+    .nav-main ul.nav-menu li {
+        padding: 20px; 
+    }
+    .nav-main ul.nav-menu-rigth {
+        margin-right: 50px;
+    }
+        /*RESPONSIVE LOGIN*/
+        .login-wrap{
+            width: 80%;
+            height: 85vh;
+        }
+        .login-html .tab{
+            font-size: 1.1rem;
+        }
+        .group input.input  {
+            font-size: 0.9rem;
+        }
+        /*TAMAÑO DE LETRA FILTROS*/
+            .filtros li {
+                padding: 10px 0;
+                font-size: 1.1rem;
+            }
+        /*RESPONSIVE FACTURA*/
+        .probando {
+            display: block;
+            font-size: 0.5rem;
+        }
+        .probando img{
+            max-width: 80px;
+        }
+        .probando > div {
+            font-size: 0.6rem;
+        }
+}

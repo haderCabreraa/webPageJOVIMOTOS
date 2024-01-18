@@ -654,6 +654,28 @@ ul {
         .login-form {
             margin-top: 10px;
         }
+           /*RESPONSIVE LOGIN*/
+        .login-wrap{
+            width: 90%;
+            height: 85vh;
+            margin: auto;
+        }
+        .login-html{
+            padding: 10px 20px 20px 20px;
+        }
+        .login-html .tab{
+            font-size: 0.9rem;
+        }
+        .login-form .group .input {
+            padding: 8px 30px;
+        }
+        .login-form {
+            margin-top: 10px;
+        }
+        /*RESPONSIVE DATOS USUSARIOP*/
+        .pintarLogin {
+            font-size: 0.8rem;
+        }
 }
 @media screen and (min-width:480px) and (max-width:768px) {
     body{
@@ -745,6 +767,11 @@ ul {
         .group input.input  {
             font-size: 0.9rem;
         }
+        /*TAMAÑO DE LETRA FILTROS*/
+            .filtros li {
+                padding: 10px 0;
+                font-size: 1.1rem;
+            }
 
 }
 
