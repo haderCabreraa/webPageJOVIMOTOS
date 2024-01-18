@@ -1,7 +1,7 @@
 const inventario = [
     {
-        "marca": "yamaha",
-        "nombre": "dt",
+        "marca": "Bajaj",
+        "nombre": "boxer",
         "modelo": 1997, 
         "referencia": "DT175", 
         "cilindraje": 171, 
@@ -10,8 +10,8 @@ const inventario = [
         "kilometraje": 53000,
     },
     {
-        "marca": "yamaha",
-        "nombre": "fz", 
+        "marca": "Akt",
+        "nombre": "dynamic", 
         "modelo": 2022, 
         "referencia": "fazer", 
         "cilindraje": 150, 
@@ -20,18 +20,8 @@ const inventario = [
         "kilometraje": 23000,
     },
     {
-        "marca": "yamaha",
-        "nombre": "fz", 
-        "modelo": 2022, 
-        "referencia": "fazer", 
-        "cilindraje": 150, 
-        "foto": "img/moto2.jpeg",
-        "precio": 3300000,
-        "kilometraje": 23000,
-    },
-    {
-        "marca": "yamaha",
-        "nombre": "mt", 
+        "marca": "Yamaha",
+        "nombre": "crypton",
         "modelo": 2022, 
         "referencia": "03", 
         "cilindraje": 299, 
@@ -40,8 +30,8 @@ const inventario = [
         "kilometraje": 23000,
     },
     {
-        "marca": "honda",
-        "nombre": "NAVI", 
+        "marca": "Susuki",
+        "nombre": "VIVA-R", 
         "modelo": 2020, 
         "referencia": "VANI MIX", 
         "cilindraje": 110,      
