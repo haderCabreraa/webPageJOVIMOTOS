@@ -1,3 +1,4 @@
+import { patchh } from "./03-patch-moto.js";
     //ESCUCHA DE BOTON HAMBURGUESA
     document.querySelector('.menu-btn').addEventListener('click', () => {
         document.querySelector('.nav-menu').classList.toggle("show")
@@ -86,7 +87,7 @@
                     //Crear nueva presentacion de loginIN
                     const div = document.createElement("div");
                     div.classList.add('pintarLogin')
-                    div.innerHTML = `<div><i class="fa fa-user-secret fa-4x" aria-hidden="true"></i></div><div><h1>USUARIO:</h1>${usuario.user}</div><div><h1>CORREO</h1>${usuario.correo}</div><div><h1>STATUS</h1>${usuario.logado}</div>`;
+                    div.innerHTML = `<div><i class="fa fa-user-secret fa-4x" aria-hidden="true"></i></div><div><h1>USUARIO</h1>${usuario.user}</div><div><h1>CORREO</h1>${usuario.correo}</div><div><h1>STATUS</h1>${usuario.logado}</div>`;
                     const deposito =  document.querySelector('.login-wrap');
                     deposito.appendChild(div)
                     break
@@ -97,4 +98,64 @@
             console.error('Error al leer el archivo JSON:', error);
         }
     }
+    //IMPRIMIR FACTURA
+const factura = function(){
+    const loquecompre = JSON.parse(window.localStorage.getItem('id')).productos;
+    const eliminarHijos = document.querySelector("#factura");
+    while (eliminarHijos.firstChild) {
+        console.log("estoy eliminando")
+        eliminarHijos.removeChild(eliminarHijos.firstChild);
+    }
+    console.log(loquecompre)
+    loquecompre.forEach(element => {
+        const div = document.createElement("div");
+        div.innerHTML = `<div><img src="${element.foto}" alt="moto"></div><div>Producto:<br>${element.nombre}</div><div>Precio:<br>${element.precio}</div><hr>`;
+        const deposito =  document.querySelector('.probando');
+        deposito.appendChild(div) 
+    });
+}  
+    //HABILITAR CARRITO
+    const compara = function(){
+        if(JSON.parse(window.localStorage.getItem('id')).productos.length > 0){
+            const carrito = document.getElementById("getFacture");
+            carrito.classList.remove('esconderCarrito')
+        }
+        factura();
+    } 
+
+    //EVENTOS PARA EL CARRITO
+const carrito = document.querySelector(".fa-shopping-cart");
+carrito.addEventListener("click", (e) => {
+    console.log("lei carrito")
+    e.preventDefault();
+    const producto = JSON.parse(window.localStorage.getItem('id')).productos;
+    //document.querySelector("#factura").classList.toggle('ocultarr')
+    document.querySelector("#containerFacture").classList.toggle('ocultarr')
+    factura();
+    compara();
+    console.log(producto)
+    e.stopPropagation();
+    e.preventDefault();
+});
+//ELIMINAR PRODUCTOS DEL LOCAL STORAGE CUANDO REALIZO COMPRA
+const eliminarProductoLocales = function(){
+    const cadena = window.localStorage.getItem("id")
+    const usuario = JSON.parse(cadena); 
+    usuario.productos = [];
+    window.localStorage.setItem('id',JSON.stringify(usuario))
+    compara();
+}
+//EVENTO DE COMPRA --> AGREGAR A DB Y CONFIRMAR AL CLIENTE COMPRA
+const mellevoEsta = document.querySelector("#containerFacture");
+mellevoEsta.addEventListener("click", (e) => {
+    console.log("ya compre")
+    e.preventDefault();
+    const url =  JSON.parse(window.localStorage.getItem('id')).id;
+    const productos = JSON.parse(window.localStorage.getItem('id')).productos;
+    console.log(typeof productos)
+    patchh(url,productos)
+    eliminarProductoLocales();
+    e.stopPropagation();
+}); 
+    compara();
     eliminarLogin();

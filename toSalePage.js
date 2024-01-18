@@ -100,7 +100,6 @@ const compara = function(){
 //BUSCAR PRODUCTO QUE ACABO DE COMPRAR
 const buscarProducto = function(producto) {
     const cadena = window.localStorage.getItem("id")
-    console.log(cadena)
     const usuario = JSON.parse(cadena);  
     inventario.forEach(element => {
         if (producto === element.nombre ) {
@@ -124,6 +123,26 @@ carrito.addEventListener("click", (e) => {
     console.log(producto)
     e.stopPropagation();
     e.preventDefault();
+});
+//ELIMINAR PRODUCTOS DEL LOCAL STORAGE CUANDO REALIZO COMPRA
+const eliminarProductoLocales = function(){
+    const cadena = window.localStorage.getItem("id")
+    const usuario = JSON.parse(cadena); 
+    usuario.productos = [];
+    window.localStorage.setItem('id',JSON.stringify(usuario))
+    compara();
+}
+//EVENTO DE COMPRA --> AGREGAR A DB Y CONFIRMAR AL CLIENTE COMPRA
+const mellevoEsta = document.querySelector("#containerFacture");
+mellevoEsta.addEventListener("click", (e) => {
+    console.log("ya compre")
+    e.preventDefault();
+    const url =  JSON.parse(window.localStorage.getItem('id')).id;
+    const productos = JSON.parse(window.localStorage.getItem('id')).productos;
+    console.log(typeof productos)
+    patchh(url,productos)
+    eliminarProductoLocales();
+    e.stopPropagation();
 });
 
 //ESCUCHA DE AGREGAR COMPRA CON LOS BOTONES DE COMPRA
@@ -249,11 +268,6 @@ const generarDatos = function(toPrint) {
         buttonFilter.addEventListener('click', callToSearch)
 
 //BARRA DE BUSQUEDA
-    //borrar caja de texto
-    let mostrarAlgo = function() {
-        const mensaje = document.querySelector("#textNav");
-        mensaje.value = '';
-    }
     //FILTRADO LEFT
     function filtrar(e) {
         //PARA LOS PRECIOS
@@ -301,6 +315,7 @@ const generarDatos = function(toPrint) {
         });
 
 import { patch } from "./03-patch-users.js";
+import { patchh } from "./03-patch-moto.js";
     //LLAMAR AL METODO DE CONTROLADOR PARA REGISTRO
         import { controlador } from "./controllers/controlador.js";
         const formu = document.querySelector("#singUp");   
@@ -389,7 +404,7 @@ async function eliminarLogin() {
                 //Crear nueva presentacion de loginIN
                 const div = document.createElement("div");
                 div.classList.add('pintarLogin')
-                div.innerHTML = `<div><i class="fa fa-user-secret fa-4x" aria-hidden="true"></i></div><div><h1>USUARIO:</h1>${usuario.user}</div><div><h1>CORREO</h1>${usuario.correo}</div><div><h1>STATUS</h1>${usuario.logado}</div>`;
+                div.innerHTML = `<div><i class="fa fa-user-secret fa-4x" aria-hidden="true"></i></div><div><h1>USUARIO</h1>${usuario.user}</div><div><h1>CORREO</h1>${usuario.correo}</div><div><h1>STATUS</h1>${usuario.logado}</div>`;
                 const deposito =  document.querySelector('.login-wrap');
                 deposito.appendChild(div)
                 break
@@ -412,3 +427,13 @@ toTop.addEventListener("click", (e) => {
     window.scroll(0,0);
     e.stopPropagation();
 });
+    //borrar caja de texto
+
+
+const deleteSmg = document.querySelector("#ssddaa");   
+    deleteSmg.addEventListener("click", (e) => {
+        e.preventDefault();
+        const mensaje = document.querySelector("#textNav");
+        mensaje.value = '';
+        e.stopPropagation();
+    });

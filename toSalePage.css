@@ -557,7 +557,6 @@ ul {
         border-radius:50px;
         background-color: #fff;
         border: 2px dotted #000;
-
     }
 /*DISEÑO DE SING IN- SING UP*/
     /*OCULTAR BOTON DE SING OUT*/
@@ -586,7 +585,6 @@ ul {
         gap: 15px;
     }
 /*FACTURA CARRITO*/
-
 .probando{
     /*border-bottom-left-radius: 15px;*/
     display: grid;
@@ -709,7 +707,7 @@ ul {
         margin-bottom: 30px;
     }
     .filtros > ul li {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         background-color: #cacac8;
     }
     .nav li a {
@@ -762,9 +760,13 @@ ul {
     .info-footer ul li {
         font-size: 0.5rem;
     }
+    /*RESPONSIVE SPAN FOOTER*/
+    .container-footer > h1 {
+        font-size: 1.8rem;  
+    }
     /*RESPONSIVE LOGIN*/
         .login-wrap{
-            width: 90%;
+            width: 95%;
             height: 85vh;
             margin: auto;
         }
@@ -802,6 +804,7 @@ ul {
 /*RESPONSIVE DATOS USUSARIOP*/
 .pintarLogin {
     font-size: 0.8rem;
+    width: 90%;
 }
     
 }

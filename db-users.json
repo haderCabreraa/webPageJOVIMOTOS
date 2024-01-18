@@ -5,7 +5,29 @@
       "user": "admin",
       "contraseña": "admin123",
       "correo": "hader.cabrera@m.com",
-      "logado": true
+      "logado": true,
+      "carrito": [
+        {
+          "marca": "yamaha",
+          "nombre": "fz",
+          "modelo": 2022,
+          "referencia": "fazer",
+          "cilindraje": 150,
+          "foto": "img/moto2.jpeg",
+          "precio": 4300000,
+          "kilometraje": 23000
+        },
+        {
+          "marca": "yamaha",
+          "nombre": "fz",
+          "modelo": 2022,
+          "referencia": "fazer",
+          "cilindraje": 150,
+          "foto": "img/moto2.jpeg",
+          "precio": 3300000,
+          "kilometraje": 23000
+        }
+      ]
     },
     {
       "id": "0337",
@@ -24,6 +46,18 @@
       "user": "juanDIego",
       "contraseña": "diego123",
       "correo": "diego.tieof@gfg.es"
+    },
+    {
+      "id": "a4d3",
+      "user": "ultimaPrueba",
+      "contraseña": "finalicehp",
+      "correo": "admin.admin@admin.es"
+    },
+    {
+      "id": "38ab",
+      "user": "ultimaPruebasa",
+      "contraseña": "finalicehp",
+      "correo": "dasd"
     }
   ]
 }
