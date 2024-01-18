@@ -6,6 +6,7 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
     width: 98vw;
@@ -541,6 +542,9 @@ ul {
         border-color: #1161ee;
     }
     /*ESTILO CARRITO DE COMPRA*/
+    .esconderCarrito {
+        visibility: hidden;
+    }
     #getFacture{
         display: flex;
         align-items: center;
@@ -778,4 +782,35 @@ ul {
             padding: 10px 0;
             font-size: 1.1rem;
         }
+}
+
+/*FACTURA CARRITO*/
+
+.probando{
+    border-bottom-left-radius: 15px;
+    display: grid;
+    width: 50vw;
+    min-height: 300px;
+    height: auto;
+    position: fixed;
+    background-color: #fff;
+    top: 60px;
+    right: 0;
+    padding: 30px 80px;
+
+}
+.probando > div {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    padding: 5px 5px;
+}
+.probando img{
+    max-width: 100px;
+}
+.ocultarr{
+    display: none;
 }

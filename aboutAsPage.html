@@ -29,11 +29,60 @@
                 </ul>
                 <ul class="nav-menu-rigth">
                     <li>
-                        <a href="toSalePage.html"><button id="buttonNav" onclick="toTop()"><i class="fas fa-search"></i></button></a>
+                        <a href="toSalePage.html"><button id="buttonNav"><i class="fas fa-search"></i></button></a>
                     </li>
+                    <li><i class="fa fa-user-circle sesion" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-sign-out sesion ocultarBoton" aria-hidden="true"></i></li>
                 </ul>
             </nav>
         </div>
+        <!--INICIO DE SESION-->
+        <div class="login-wrap showLogin">
+            <div class="login-html">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar sesion</label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Resgristarse</label>
+                <div class="login-form">
+                    <form  id="singIn" value ="iniciarSesion">
+                        <div class="sign-in-htm">
+                            <div class="group">
+                                <label for="user" class="label">Nombre de usuario</label>
+                                <input name="user" id="user" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="contraseña" class="label">Contraseña</label>
+                                <input name="contraseña" id="contraseña" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="Iniciar sesion">
+                            </div>
+                            <div class="hr"></div>
+                        </div>
+                    </form>
+                    
+                    <form id="singUp" value ="registrarme">
+                        <div class="sign-up-htm">
+                            <div class="group">
+                                <label for="user" class="label">Nombre de usuario</label>
+                                <input name="user" id="user" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="contraseña" class="label">Contraseña</label>
+                                <input name="contraseña" id="contraseña" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <label for="correo" class="label">Correo electronico</label>
+                                <input name="correo" id="correo" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <input type="submit"  class="button singUp" value="registrarme">
+                            </div>
+                            <div class="hr"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--INICIO DE SESION-->
         <div class="imagen1"><img src="img/page4.jpg" alt=""></div>
         <div id="history"><h1>Nuestra historia</h1><hr><p>La empresa nació con un compromiso inquebrantable con la calidad y la atención al cliente. Crearon un ambiente acogedor en su concesionario, donde los clientes no solo podían comprar motos, sino también aprender sobre mantenimiento, participar en eventos de la comunidad motociclista y formar parte de una verdadera familia de amantes de las dos ruedas. <br>
         Con el tiempo, la reputación de la empresa creció y atrajo a más entusiastas. Organizaron paseos en grupo, patrocinaron eventos locales y se convirtieron en un centro vibrante para la cultura motociclista en la comunidad.</p></div>
@@ -86,6 +135,6 @@
 
     </div>
     <p class="copyr">COPYRIGHT 2023 - TODOS LOS DERECHOS RESERVADOS | JOVIMOTOS</p>
-    <script src="aboutAsPage.js"></script>
+    <script src="aboutAsPage.js" type="module"></script>
 </body>
 </html>

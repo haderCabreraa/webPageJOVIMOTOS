@@ -4,7 +4,8 @@
       "id": "7265",
       "user": "admin",
       "contraseña": "admin123",
-      "correo": "hader.cabrera@m.com"
+      "correo": "hader.cabrera@m.com",
+      "logado": true
     },
     {
       "id": "0337",

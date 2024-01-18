@@ -50,6 +50,11 @@ export function controlador(formu, event, entidad) {
                         if (datos.user === usuario.user && datos.contraseña === usuario.contraseña) {
                             bandera = true;
                             alert("Logado correctamente")
+                            const valor = {
+                                "id": usuario.id,
+                                "productos": []
+                            }
+                            window.localStorage.setItem('id',JSON.stringify(valor));
                             patch(url + '/' + usuario.id)
                             console.log("PASEEEEEE CON:",url + '/' + usuario.id)
                             break

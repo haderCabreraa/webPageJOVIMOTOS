@@ -71,7 +71,73 @@ const inventario = [
         "kilometraje": 23000,
     }
 ]
-//PAGINACION
+
+//IMPRIMIR FACTURA
+const factura = function(){
+    const loquecompre = JSON.parse(window.localStorage.getItem('id')).productos;
+    const eliminarHijos = document.querySelector("#factura");
+    while (eliminarHijos.firstChild) {
+        console.log("estoy eliminando")
+        eliminarHijos.removeChild(eliminarHijos.firstChild);
+    }
+    console.log(loquecompre)
+    loquecompre.forEach(element => {
+        const div = document.createElement("div");
+        div.innerHTML = `<div><img src="${element.foto}" alt="moto"></div><div>Producto:<br>${element.nombre}</div><div>Precio:<br>${element.precio}</div><hr>`;
+        const deposito =  document.querySelector('.probando');
+        deposito.appendChild(div) 
+    });
+}
+//HABILITAR CARRITO
+const compara = function(){
+    if(JSON.parse(window.localStorage.getItem('id')).productos.length > 0){
+        const carrito = document.getElementById("getFacture");
+        carrito.classList.remove('esconderCarrito')
+    }
+    factura();
+}             
+
+//BUSCAR PRODUCTO QUE ACABO DE COMPRAR
+const buscarProducto = function(producto) {
+    const cadena = window.localStorage.getItem("id")
+    console.log(cadena)
+    const usuario = JSON.parse(cadena);  
+    inventario.forEach(element => {
+        if (producto === element.nombre ) {
+            usuario.productos.push(element)
+        }
+    });
+    window.localStorage.setItem('id',JSON.stringify(usuario))
+    compara();
+}
+
+//EVENTOS PARA EL CARRITO
+const carrito = document.querySelector(".fa-shopping-cart");
+carrito.addEventListener("click", (e) => {
+    console.log("lei carrito")
+    e.preventDefault();
+    const producto = JSON.parse(window.localStorage.getItem('id')).productos;
+    document.querySelector("#factura").classList.toggle('ocultarr')
+    factura();
+    compara();
+    console.log(producto)
+    e.stopPropagation();
+    e.preventDefault();
+});
+
+//ESCUCHA DE AGREGAR COMPRA CON LOS BOTONES DE COMPRA
+const agregarCompra = function(){
+    const boton = document.querySelectorAll(".mostrando");
+    console.log(boton)
+    boton.forEach(element => {
+        element.addEventListener("click", (e) => {
+            e.preventDefault();
+            //element.classList.value.split(' ')[1] ID LOGADO
+            buscarProducto(element.classList.value.split(' ')[1]);
+            e.stopPropagation();
+        });
+    });
+}
 //Generar datos para luego llamar a imprimir
 const generarDatos = function(toPrint) {
     //eliminar los articulos actuales
@@ -81,10 +147,11 @@ const generarDatos = function(toPrint) {
     }
     toPrint.forEach(element => {
         const article = document.createElement("article");
-        article.innerHTML = `<div class="card"><img src="${element.foto}"alt="cards"><h3>${element.marca}<span>${element.nombre.toUpperCase()}</span></h3><ul><li>Modelo: ${element.modelo}</li><li>Cilindraje: ${element.cilindraje}cc</li><li>Kilometraje: ${element.kilometraje}</li></ul><br><p>Precio: ${element.precio.toLocaleString('es-ES')} COP</p><hr><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a><div id="addShop"><button id="addShop"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Agregar al carrito</button></div></div>`;
+        article.innerHTML = `<div class="card"><img src="${element.foto}"alt="cards"><h3>${element.marca}<span>${element.nombre.toUpperCase()}</span></h3><ul><li>Modelo: ${element.modelo}</li><li>Cilindraje: ${element.cilindraje}cc</li><li>Kilometraje: ${element.kilometraje}</li></ul><br><p>Precio: ${element.precio.toLocaleString('es-ES')} COP</p><hr><a href="#">Mas información<i class="fas fa-angle-double-right"></i></a><div id="addShop"><button class="mostrando ${element.nombre} " id="addShop"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Agregar al carrito</button ></div></div>`;
         const deposito =  document.querySelector('.newsCards');
         deposito.appendChild(article)
     });
+    agregarCompra();//ESCUCHAR BOTONES DE COMPRA AL ACTUALIZAR PROUDCTOS
 }
 //ADAPTANDO PAGINACION
     //LECTURA DE BOTONES
@@ -92,7 +159,7 @@ const generarDatos = function(toPrint) {
         const botonSiguienteDOM = document.querySelector(".siguiente");
         const botonAtrasDOM1 = document.querySelector(".atras1");
         const botonSiguienteDOM1 = document.querySelector(".siguiente1");
-        const elementosPorPagina = 4;
+        const elementosPorPagina = 3;
         let paginaActual = 1;
 
     //PAGINACION
@@ -186,11 +253,6 @@ const generarDatos = function(toPrint) {
         const mensaje = document.querySelector("#textNav");
         mensaje.value = '';
     }
-    //Funciona para volver a inicio con lupa
-    function toTop() {
-        window.scrollTo(0, 0)
-    }
-
     //FILTRADO LEFT
     function filtrar(e) {
         //PARA LOS PRECIOS
@@ -237,6 +299,7 @@ const generarDatos = function(toPrint) {
             document.querySelector('.login-wrap').classList.toggle("showLogin")
         });
 
+import { patch } from "./03-patch-users.js";
     //LLAMAR AL METODO DE CONTROLADOR PARA REGISTRO
         import { controlador } from "./controllers/controlador.js";
         const formu = document.querySelector("#singUp");   
@@ -250,7 +313,6 @@ const generarDatos = function(toPrint) {
     //LLAMAR AL METODO DE CONTROLADOR PARA INICIO DE SESION
         const sesion = document.querySelector("#singIn");   
         sesion.addEventListener("submit", (e) => {
-            console.log("lei inicio")
             e.preventDefault();
             controlador(sesion, e, "usuarios");
             e.stopPropagation();
@@ -276,6 +338,7 @@ const generarDatos = function(toPrint) {
                     'Content-type': 'application/json; charset=UFT-8',
                 },
             })
+            console.log(compro)
         }
         //TOMAR BOTON DE SIGNOUT PARA ELIMINAR ATRIBUTO "LOGADO"
         const singOut = document.querySelector('.fa-sign-out');
@@ -301,6 +364,16 @@ const generarDatos = function(toPrint) {
             eliminarLogin();
             e.stopPropagation();    
         });
+//HABILITA/DESHANILITA BOTON DE COMPRA
+const desabilitar = function() {
+    console.log("entre")
+    const elementos = document.querySelectorAll('.mostrando')
+    elementos.forEach(element => {
+        element.disabled = true;
+    });
+}
+
+
 //HABILITAR/DESHABILITAR BOTON DE INICIO DE SESION
 async function eliminarLogin() {
     const buttonSignOut =document.querySelector('.fa-sign-out');
@@ -320,6 +393,9 @@ async function eliminarLogin() {
                 deposito.appendChild(div)
                 break
             }
+            else{
+                desabilitar();  
+            }
         }
         
     }catch (error) {
@@ -327,5 +403,11 @@ async function eliminarLogin() {
     }
 }
 eliminarLogin();
-
-
+compara();
+//Funciona para volver a inicio con lupa
+const toTop = document.querySelector("#buttonNav");   
+toTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scroll(0,0);
+    e.stopPropagation();
+});
