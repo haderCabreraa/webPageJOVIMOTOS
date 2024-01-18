@@ -8,7 +8,7 @@ const inventario = [
         "foto": "img/moto1.jpeg",
         "precio": 4300000,
         "kilometraje": 53000,
-        "color":"azul"
+        "color":"azul" 
     },
     {
         "marca": "Akt",
