@@ -4,8 +4,7 @@
       "id": "7265",
       "user": "admin",
       "contraseña": "admin123",
-      "correo": "hader.cabrera@m.com",
-      "logado": true
+      "correo": "hader.cabrera@m.com"
     },
     {
       "id": "0337",
@@ -18,6 +17,12 @@
       "user": "adqwemin4234",
       "contraseña": "sdsad",
       "correo": "hader.cabrera@dfd.com"
+    },
+    {
+      "id": "0689",
+      "user": "juanDIego",
+      "contraseña": "diego123",
+      "correo": "diego.tieof@gfg.es"
     }
   ]
 }

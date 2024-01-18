@@ -239,7 +239,6 @@ const generarDatos = function(toPrint) {
 
     //LLAMAR AL METODO DE CONTROLADOR PARA REGISTRO
         import { controlador } from "./controllers/controlador.js";
-
         const formu = document.querySelector("#singUp");   
         formu.addEventListener("submit", (e) => {
             console.log("lei registro")
@@ -328,6 +327,5 @@ async function eliminarLogin() {
     }
 }
 eliminarLogin();
-
 
 
